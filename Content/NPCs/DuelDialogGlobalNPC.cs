@@ -259,13 +259,13 @@ namespace TerraTCG.Content.NPCs
 				new("QueenSlime", BotDecks.GetQueenSlimeDeck(), [GetReward<QueenSlimePack>(2), GetReward<InvitationToDuel>(2)], sleeve: CardSleeve.HALLOWED),
 			],
 			[NPCID.SkeletronPrime] = [
-				new("SkeletronPrime", BotDecks.GetSkeletronPrimeDeck(), [GetReward<ForestPack>(2), GetReward<InvitationToDuel>(2)], sleeve: CardSleeve.SKELETRON_PRIME),
+				new("SkeletronPrime", BotDecks.GetSkeletronPrimeDeck(), [GetReward<SkeletronPrimePack>(2), GetReward<InvitationToDuel>(2)], sleeve: CardSleeve.SKELETRON_PRIME),
 			],
 			[NPCID.TheDestroyer] = [
-				new("Destroyer", BotDecks.GetDestroyerDeck(), [GetReward<ForestPack>(2), GetReward<InvitationToDuel>(2)], sleeve: CardSleeve.DESTROYER),
+				new("Destroyer", BotDecks.GetDestroyerDeck(), [GetReward<DestroyerPack>(2), GetReward<InvitationToDuel>(2)], sleeve: CardSleeve.DESTROYER),
 			],
 			[NPCID.Retinazer] = [
-				new("Destroyer", BotDecks.GetTwinsDeck(), [GetReward<ForestPack>(2), GetReward<InvitationToDuel>(2)], sleeve: CardSleeve.TWINS),
+				new("Destroyer", BotDecks.GetTwinsDeck(), [GetReward<TwinsPack>(2), GetReward<InvitationToDuel>(2)], sleeve: CardSleeve.TWINS),
 			]
         };
     }

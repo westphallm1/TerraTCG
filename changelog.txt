@@ -1,12 +1,4 @@
 v{ModVersion} has been published to {tMLBuildPurpose} tML v{tMLVersion}.
-
-Additions
-=========
-* Add NPC Boss fights for the Destroyer, Skeletron Prime, and the Twins
-* Add 1 new card each to the existing Jungle Pack and Mushroom Pack
-
 Bugfixes
 ========
-* Fix issue where Guide to Critters would lock attacks when equipped to a Critter
-* Fix issue where Start Duel button remained visible when player clicked between an NPC and a sign
-* Fix issue where Queen Slime foil version didn't display as foiled
+* Fix issue where mech bosses dropped incorrect pack on defeat

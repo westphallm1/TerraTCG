@@ -1,5 +1,5 @@
 displayName = TerraTCG
 author = billybobmcbo
-version = 1.1.0
+version = 1.1.0.1
 sortAfter = DialogueTweak
 homepage = https://forums.terraria.org/index.php?threads/terratcg-the-terraria-collectible-card-game.140791/
