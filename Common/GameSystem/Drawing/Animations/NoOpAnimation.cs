@@ -13,6 +13,8 @@ namespace TerraTCG.Common.GameSystem.Drawing.Animations
     internal class NoOpAnimation(TimeSpan duration = default) : IAnimation
     {
         public TimeSpan StartTime { get; set; }
+
+		public TimeSpan Duration => duration;
         public Zone SourceZone { private get; set; }
 
         private TimeSpan ElapsedTime => TCGPlayer.TotalGameTime - StartTime;

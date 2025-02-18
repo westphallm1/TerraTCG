@@ -15,7 +15,7 @@ namespace TerraTCG.Common.GameSystem.Drawing.Animations
         public TimeSpan StartTime { get; set; } 
         public Zone SourceZone { private get; set; }
 
-        private TimeSpan Duration { get; } = TimeSpan.FromSeconds(1f);
+        public TimeSpan Duration { get; } = TimeSpan.FromSeconds(1f);
         private TimeSpan ElapsedTime => TCGPlayer.TotalGameTime - StartTime;
 
         private float WindupDuration => (float)Duration.TotalSeconds * 0.25f;

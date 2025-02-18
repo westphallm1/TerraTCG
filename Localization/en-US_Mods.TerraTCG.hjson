@@ -2108,6 +2108,18 @@ Cards: {
 		Modifier.Description: Evasive
 	}
 
+	DesertSpirit: {
+		Name: "{$NPCName.DesertDjinn}"
+		Attack.Name: Spirit Flame
+		Modifier.Description:
+			'''
+			Sandstorm: If an ally 
+			attacks an enemy in an 
+			empty column, move it 
+			into that column.
+			'''
+	}
+
 	Types: {
 		CREATURE: Creature
 		ITEM: Item

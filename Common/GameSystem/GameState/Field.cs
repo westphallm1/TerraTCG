@@ -41,6 +41,16 @@ namespace TerraTCG.Common.GameSystem.GameState
             }
         }
 
+		internal void ModifyAttackSourceAndDestZones(ref Zone sourceZone, ref Zone destZone)
+		{
+			var sourceZoneModifiers = sourceZone.PlacedCard?.CardModifiers ?? [];
+
+			foreach(var modifier in sourceZoneModifiers.Concat(CardModifiers))
+			{
+				modifier.ModifyAttackZones(ref sourceZone, ref destZone);
+			}
+		}
+
         internal void Draw(SpriteBatch spriteBatch, Vector2 position, float rotation)
         {
             // Draw the front row

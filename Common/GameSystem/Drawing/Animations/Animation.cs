@@ -18,6 +18,8 @@ namespace TerraTCG.Common.GameSystem.Drawing.Animations
     {
         TimeSpan StartTime { get; set; }
 
+        TimeSpan Duration { get; }
+
         Zone SourceZone { set;  }
 
         // Draw the card within the zone itself, if applicable
@@ -31,6 +33,8 @@ namespace TerraTCG.Common.GameSystem.Drawing.Animations
 
         bool IsDefault() => false;
         bool IsComplete();
+
+		internal TimeSpan RemainingTime => Duration - (TCGPlayer.TotalGameTime - StartTime);
     }
 
     internal class AnimationUtils 

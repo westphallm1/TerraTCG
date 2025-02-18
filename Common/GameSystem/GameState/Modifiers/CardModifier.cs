@@ -77,6 +77,13 @@ namespace TerraTCG.Common.GameSystem.GameState.Modifiers
             // no-op
         }
 
+		// Switch the source or destination zone of an attack before
+		// damage is dealt
+        public void ModifyAttackZones(ref Zone sourceZone, ref Zone destZone) 
+        {
+			// no-op
+        }
+
         // Modify an attack as this card performs it
         public void ModifyAttack(ref Attack attack, Zone sourceZone, Zone destZone) 
         {

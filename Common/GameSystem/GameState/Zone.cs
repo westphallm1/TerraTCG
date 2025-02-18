@@ -35,6 +35,17 @@ namespace TerraTCG.Common.GameSystem.GameState
 
         internal const float CARD_DRAW_SCALE = 2f / 3f;
 
+        public GamePlayer Owner => Game.GamePlayers.Where(p => p.Field.Zones.Contains(this)).FirstOrDefault();
+
+        public List<Zone> Siblings => Owner.Field.Zones;
+
+        // Helper to get the name of the card that is (or isn't) placed in the zone
+        public string CardName => PlacedCard?.Template.CardName;
+
+        public bool HasPlacedCard() => PlacedCard != null;
+
+        // For defense zones, check whether an enemy is in the aligned offense zone
+        public bool IsBlocked() => Role == ZoneRole.DEFENSE && !Owner.Field.Zones[Index - 3].IsEmpty();
 
         public void PlaceCard(Card card)
         {
@@ -77,11 +88,6 @@ namespace TerraTCG.Common.GameSystem.GameState
             GameSounds.PlaySound(GameAction.PROMOTE_CARD);
         }
 
-        public bool HasPlacedCard() => PlacedCard != null;
-
-        // For defense zones, check whether an enemy is in the aligned offense zone
-        public bool IsBlocked() => Role == ZoneRole.DEFENSE && !Owner.Field.Zones[Index - 3].IsEmpty();
-
         internal void QueueAnimation(IAnimation animation)
         {
             // Clear out any infinite idle animations
@@ -93,6 +99,16 @@ namespace TerraTCG.Common.GameSystem.GameState
             animation.SourceZone = this;
             animationQueue.Add(animation);
         }
+
+		internal TimeSpan QueuedAnimationDuration()
+		{
+			var nonDefault = animationQueue.Where(a => !a.IsDefault());
+			if (!nonDefault.Any())
+			{
+				return TimeSpan.Zero;
+			}
+			return nonDefault.First().RemainingTime + new TimeSpan(nonDefault.Skip(1).Sum(a => a.Duration.Ticks));
+		}
 
         internal void UpdateAnimationQueue()
         {
@@ -110,13 +126,6 @@ namespace TerraTCG.Common.GameSystem.GameState
                 }
             }
         }
-
-        public GamePlayer Owner => Game.GamePlayers.Where(p => p.Field.Zones.Contains(this)).FirstOrDefault();
-
-        public List<Zone> Siblings => Owner.Field.Zones;
-
-        // Helper to get the name of the card that is (or isn't) placed in the zone
-        public string CardName => PlacedCard?.Template.CardName;
 
         private void DrawOffenseIcon(SpriteBatch spriteBatch, Vector2 position, float rotation)
         {

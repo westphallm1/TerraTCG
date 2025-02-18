@@ -18,7 +18,7 @@ namespace TerraTCG.Common.GameSystem.Drawing.Animations
         public TimeSpan StartTime { get; set; }
         public Zone SourceZone { private get; set; }
         private TimeSpan ElapsedTime => TCGPlayer.TotalGameTime - StartTime;
-        private TimeSpan Duration => TimeSpan.FromSeconds(1.25f);
+        public TimeSpan Duration => TimeSpan.FromSeconds(1.25f);
         private TimeSpan Period => TimeSpan.FromSeconds(2f);
 
         public void DrawZone(SpriteBatch spriteBatch, Vector2 basePosition, float rotation)

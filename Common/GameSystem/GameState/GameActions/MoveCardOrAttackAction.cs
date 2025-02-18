@@ -148,16 +148,17 @@ namespace TerraTCG.Common.GameSystem.GameState.GameActions
 
         private void DoAttack()
         {
-            var currTime = TCGPlayer.TotalGameTime;
-            // attack opposing field
+			// Check if any modifiers change the source or destination for the attack
+			startZone.Owner.Field.ModifyAttackSourceAndDestZones(ref startZone, ref endZone);
             var prevHealth = endZone.PlacedCard.CurrentHealth;
             startZone.PlacedCard.IsExerted = true;
             var attack = startZone.PlacedCard.GetAttackWithModifiers(startZone, endZone);
             player.Resources = player.Resources.UseResource(mana: attack.Cost);
             attack.DoAttack(attack, startZone, endZone);
 
+			var pendingAnimationTime = startZone.QueuedAnimationDuration();
             startZone.QueueAnimation(new MeleeAttackAnimation(startZone.PlacedCard, endZone));
-            endZone.QueueAnimation(new IdleAnimation(endZone.PlacedCard, TimeSpan.FromSeconds(0.5f), prevHealth));
+            endZone.QueueAnimation(new IdleAnimation(endZone.PlacedCard,  pendingAnimationTime + TimeSpan.FromSeconds(0.5f), prevHealth));
             endZone.QueueAnimation(new TakeDamageAnimation(endZone.PlacedCard, prevHealth));
 
             player.Field.ClearModifiers(player, startZone, GameEvent.AFTER_ATTACK);

@@ -14,7 +14,7 @@ namespace TerraTCG.Common.GameSystem.Drawing.Animations
     {
         public TimeSpan StartTime { get; set; } 
         public Zone SourceZone { private get; set; }
-        internal TimeSpan Duration { get; } = TimeSpan.FromSeconds(0.5f);
+        public TimeSpan Duration { get; } = TimeSpan.FromSeconds(0.5f);
         private TimeSpan ElapsedTime => TCGPlayer.TotalGameTime - StartTime;
 
         // TODO playing sounds from inside an animation is not good
