@@ -214,7 +214,7 @@ namespace TerraTCG.Common.GameSystem.BotPlayer
                 .Where(z => new DeployCreatureAction(bestCardInHand, GamePlayer).CanAcceptZone(z))
                 .OrderByDescending(z => z.Role == (bestCardInHand?.Role ?? ZoneRole.OFFENSE)) // Prefer playing cards in the correct role
 				.ThenByDescending(z => z.IsBlocked())
-				.ThenByDescending(z => z.Index % 3 == 1) // For aesthetic reasons, prefer the center row
+				.ThenByDescending(z => z.Column == 1) // For aesthetic reasons, prefer the center row
                 .FirstOrDefault();
 
             if(bestCardInHand != null && bestTargetZone != null)

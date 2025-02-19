@@ -5,44 +5,42 @@ using System.Text;
 using System.Threading.Tasks;
 using Terraria.ID;
 using Terraria.ModLoader;
+using TerraTCG.Common.GameSystem.Drawing.Animations;
 using TerraTCG.Common.GameSystem.GameState;
+using TerraTCG.Common.GameSystem.GameState.GameActions;
 using TerraTCG.Common.GameSystem.GameState.Modifiers;
 
 namespace TerraTCG.Common.GameSystem.CardData
 {
-    internal class EnchantedSword : BaseCardTemplate, ICardTemplate
+    internal class Lamia : BaseCardTemplate, ICardTemplate
     {
-		private class EnchantedSwordHallowModifier : ICardModifier
+		private class LamiaAttackCostDecreaseModifier : ICardModifier
 		{
-			public bool AppliesToZone(Zone zone) => zone.Column == 1;
-
 			public void ModifyAttack(ref Attack attack, Zone sourceZone, Zone destZone) 
 			{
-				if(AppliesToZone(sourceZone))
+				if(sourceZone.Column == destZone?.Column)
 				{
-					attack.Damage += 1;
+					attack.Cost = Math.Max(1, attack.Cost - 1);
 				}
 			}
 
-			// Field modifier, refresh at start of turn
-			public bool ShouldRemove(GameEventInfo eventInfo) => FieldModifierHelper.ShouldRemove(eventInfo, "EnchantedSword");
+			public bool ShouldRemove(GameEventInfo eventInfo) => FieldModifierHelper.ShouldRemove(eventInfo, "Lamia");
 		}
 
         public override Card CreateCard() => new ()
         {
-            Name = "EnchantedSword",
+            Name = "Lamia",
             MaxHealth = 7,
-            MoveCost = 2,
             CardType = CardType.CREATURE,
-            NPCID = NPCID.EnchantedSword,
-            SubTypes = [CardSubtype.HALLOWED, CardSubtype.FIGHTER],
+            NPCID = NPCID.DesertLamiaDark,
+            SubTypes = [CardSubtype.DESERT, CardSubtype.CASTER],
+			FieldModifiers = () => [new LamiaAttackCostDecreaseModifier()],
             Attacks = [
                 new() {
-                    Damage = 3,
+                    Damage = 2,
                     Cost = 2,
                 }
             ],
-			FieldModifiers = () => [new EnchantedSwordHallowModifier()],
         };
     }
 }

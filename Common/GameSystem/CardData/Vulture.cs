@@ -10,24 +10,23 @@ using TerraTCG.Common.GameSystem.GameState.Modifiers;
 
 namespace TerraTCG.Common.GameSystem.CardData
 {
-    internal class Unicorn : BaseCardTemplate, ICardTemplate
+    internal class Vulture : BaseCardTemplate, ICardTemplate
     {
-		private class UnicornHallowedModifier : ICardModifier
+		private class VultureEvasiveModifier : ICardModifier
 		{
-			public bool AppliesToZone(Zone zone) => zone.Column == 1;
+			public bool AppliesToZone(Zone zone) => zone.Owner.Opponent.Field.Zones.Any(z => z.Column == zone.Column && z.HasPlacedCard());
 
-			public void ModifyCardEntrance(Zone sourceZone) 
+			public void ModifyZoneSelection(Zone sourceZone, Zone endZone, ref List<Zone> destZones)
 			{
-				// Having cards enter unpaused on turn 1 screws up a 
-				// bunch of enemy decision-making.
-				if(AppliesToZone(sourceZone) && sourceZone.Owner.Game.CurrentTurn.TurnCount > 1)
+				// no-op
+				foreach(var zone in sourceZone.Owner.Opponent.Field.Zones)
 				{
-					sourceZone.PlacedCard.IsExerted = false;
+					if(zone.HasPlacedCard() && zone.Column == sourceZone.Column && !destZones.Contains(zone))
+					{
+						destZones.Add(zone);
+					}
 				}
 			}
-
-			// Field modifier, refresh at start of turn
-			public bool ShouldRemove(GameEventInfo eventInfo) => FieldModifierHelper.ShouldRemove(eventInfo, "Unicorn");
 		}
 
 		private class UnicornOnEnterModifier : ICardModifier
@@ -49,19 +48,18 @@ namespace TerraTCG.Common.GameSystem.CardData
 
         public override Card CreateCard() => new ()
         {
-            Name = "Unicorn",
+            Name = "Vulture",
             MaxHealth = 7,
             CardType = CardType.CREATURE,
-            NPCID = NPCID.Unicorn,
-            SubTypes = [CardSubtype.HALLOWED, CardSubtype.FIGHTER],
+            NPCID = NPCID.Vulture,
+            SubTypes = [CardSubtype.DESERT, CardSubtype.FIGHTER],
             Attacks = [
                 new() {
-                    Damage = 2,
-                    Cost = 2,
+                    Damage = 4,
+                    Cost = 3,
                 }
             ],
-			Modifiers = () => [new UnicornOnEnterModifier()],
-			FieldModifiers = () => [new UnicornHallowedModifier()],
+			Modifiers = () => [new VultureEvasiveModifier()],
         };
     }
 }

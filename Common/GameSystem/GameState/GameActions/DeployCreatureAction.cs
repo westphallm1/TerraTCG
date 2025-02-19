@@ -52,7 +52,7 @@ namespace TerraTCG.Common.GameSystem.GameState.GameActions
             {
                 var noBossPresent = !zone.Siblings.Any(z => z.PlacedCard?.Template.SubTypes.Contains(CardSubtype.BOSS) ?? false);
 				return noBossPresent && player.Owns(zone) && zone.IsEmpty() &&
-					(zone.Index % 3 == 1 || !CenterOnlyCards.Contains(card));
+					(zone.Column == 1 || !CenterOnlyCards.Contains(card));
             } else if(card.SubTypes.Contains(CardSubtype.EXPERT))
             {
                 // Check whether the Expert creature type and placed creature type match, eg.

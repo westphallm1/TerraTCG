@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Xna.Framework.Graphics;
+using ReLogic.Content;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,12 +16,16 @@ namespace TerraTCG.Common.GameSystem.CardData
 {
     internal class DesertSpirit : BaseCardTemplate, ICardTemplate
     {
-		private class MoveAttackersToUnoccupiedZoneModifier : ICardModifier
+		internal class MoveAttackersToUnoccupiedZoneModifier(bool isField) : ICardModifier
 		{
+			public Card SourceCard { get; set; }
+
+			public Asset<Texture2D> Texture { get; set; }
+
 			public void ModifyAttackZones(ref Zone sourceZone, ref Zone destZone) 
 			{
 				var destIdx = destZone.Index;
-				var sameColumnZone = sourceZone.Siblings.Where(z => z.Index == destIdx).First();
+				var sameColumnZone = sourceZone.Siblings.Where(z => z.Index == destIdx % 3).First();
 				if(sameColumnZone.IsEmpty())
 				{
 					sameColumnZone.PlacedCard = sourceZone.PlacedCard;
@@ -32,7 +38,7 @@ namespace TerraTCG.Common.GameSystem.CardData
 				}
 			}
 
-			public bool ShouldRemove(GameEventInfo eventInfo) => FieldModifierHelper.ShouldRemove(eventInfo, "DesertSpirit");
+			public bool ShouldRemove(GameEventInfo eventInfo) => isField && FieldModifierHelper.ShouldRemove(eventInfo, "DesertSpirit");
 		}
 
         public override Card CreateCard() => new ()
@@ -43,7 +49,7 @@ namespace TerraTCG.Common.GameSystem.CardData
             NPCID = NPCID.DesertDjinn,
             SubTypes = [CardSubtype.DESERT, CardSubtype.CASTER],
             Role = ZoneRole.DEFENSE,
-			FieldModifiers = () => [new MoveAttackersToUnoccupiedZoneModifier()],
+			FieldModifiers = () => [new MoveAttackersToUnoccupiedZoneModifier(true)],
             Attacks = [
                 new() {
                     Damage = 2,

@@ -14,7 +14,7 @@ namespace TerraTCG.Common.GameSystem.CardData
     {
 		private class IlluminantBatHallowedModifier : ICardModifier
 		{
-			public bool AppliesToZone(Zone zone) => zone.Index % 3 == 1;
+			public bool AppliesToZone(Zone zone) => zone.Column == 1;
 
 			public ModifierType Category => ModifierType.EVASIVE;
 

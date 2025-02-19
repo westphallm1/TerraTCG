@@ -30,6 +30,9 @@ namespace TerraTCG.Common.GameSystem.GameState
 
         internal int Index { get; set; }
 
+		internal int Row => Index / 3;
+		internal int Column => Index % 3;
+
         private List<IAnimation> animationQueue = [];
         internal IAnimation Animation { get => animationQueue.Count > 0 ? animationQueue[0] : null; set { QueueAnimation(value); } }
 
@@ -67,6 +70,9 @@ namespace TerraTCG.Common.GameSystem.GameState
         public void PromoteCard(Card newCard)
         {
             var leavingCard = PlacedCard;
+            QueueAnimation(new RemoveCardAnimation(leavingCard));
+            QueueAnimation(new PlaceCardAnimation(new PlacedCard(newCard)));
+
             var dmgTaken = leavingCard.Template.MaxHealth - leavingCard.CurrentHealth;
             // Keep all item-sourced modifiers on the card post-promotion,
             // Remove debuffs
@@ -78,13 +84,6 @@ namespace TerraTCG.Common.GameSystem.GameState
             PlacedCard.CurrentHealth -= dmgTaken;
             PlacedCard.AddModifiers(itemModifiers);
 
-            foreach (var modifier in PlacedCard.CardModifiers.Concat(Owner.Field.CardModifiers))
-            {
-                modifier.ModifyCardEntrance(this);
-            }
-
-            QueueAnimation(new RemoveCardAnimation(leavingCard));
-            QueueAnimation(new PlaceCardAnimation(PlacedCard));
             GameSounds.PlaySound(GameAction.PROMOTE_CARD);
         }
 
@@ -148,7 +147,7 @@ namespace TerraTCG.Common.GameSystem.GameState
         internal Dictionary<ModifierType, int> GetKeywordModifiers()
 		{
 			// Easy - Get the modifiers that apply directly on the card
-			var modifierMap = PlacedCard?.GetKeywordModifiers() ?? [];
+			var modifierMap = PlacedCard?.GetKeywordModifiers(this) ?? [];
 
 			// More challenging - get field modifiers that also apply to the card
 			var fieldModifiersForCard = Owner.Field.CardModifiers.Where(m => m.AppliesToZone(this));

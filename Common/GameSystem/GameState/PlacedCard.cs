@@ -34,14 +34,14 @@ namespace TerraTCG.Common.GameSystem.GameState
             CardModifiers.AddRange(modifiers);
         }
 
-        internal Dictionary<ModifierType, int> GetKeywordModifiers()
+        internal Dictionary<ModifierType, int> GetKeywordModifiers(Zone myZone)
         {
             var modifierMap = new Dictionary<ModifierType, int>();
             if(IsExerted)
             {
                 modifierMap[ModifierType.PAUSED] = 1;
             }
-            foreach(var modifier in CardModifiers.Where(m=>m.Category != ModifierType.NONE))
+            foreach(var modifier in CardModifiers.Where(m=>m.AppliesToZone(myZone) && m.Category != ModifierType.NONE))
             {
                 if (!modifierMap.TryGetValue(modifier.Category, out int currentAmount))
                 {

@@ -2120,6 +2120,129 @@ Cards: {
 			'''
 	}
 
+	SandstormInABottle: {
+		Name: "{$ItemName.SandstorminaBottle}"
+
+		Skill: {
+			Name: Equip
+			Description:
+				'''
+				When equipped ally 
+				attacks an enemy in an 
+				empty column, move it 
+				into that column.
+				'''
+		}
+	}
+
+	Lamia: {
+		Name: "{$NPCName.DesertLamiaDark}"
+		Attack.Name: Constrict
+		Modifier.Description:
+			'''
+			Sandstorm: Allies'
+			attacks on enemies in
+			the same column cost
+			-1 MP.
+			'''
+	}
+
+	AntlionCharger: {
+		Name: "{$NPCName.WalkingAntlion}"
+
+		Attack: {
+			Name: Bug Bite
+			Description:
+				'''
+				Deals +1 dmg when
+				attacking enemies in 
+				the same column.
+				'''
+		}
+
+		Modifier.Description: Zealous.
+	}
+
+	AntlionSwarmer: {
+		Name: "{$NPCName.FlyingAntlion}"
+
+		Attack: {
+			Name: Sand Swarm
+			Description:
+				'''
+				Deals +1 dmg when
+				attacking enemies in 
+				the same column.
+				'''
+		}
+
+		Modifier.Description: Zealous.
+	}
+
+	Ghoul: {
+		Name: "{$NPCName.DesertGhoul}"
+
+		Attack: {
+			Name: Ghoul Glare
+			Description:
+				'''
+				Deals +1 dmg when
+				attacking enemies in 
+				the same column.
+				'''
+		}
+	}
+
+	Scorpion: {
+		Name: "{$NPCName.Scorpion}"
+		Attack.Name: Sting
+
+		Skill: {
+			Name: Skill: Sandy Song
+			Description:
+				'''
+				Target ally deals 
+				+1 dmg to enemies in 
+				its column this turn.
+				'''
+		}
+	}
+
+	SandShark: {
+		Name: "{$NPCName.SandShark}"
+		Attack.Name: Cactus Chomp
+		Modifier.Description:
+			'''
+			Sandstorm: This doesn't
+			Pause after attacking 
+			an enemy in the same 
+			column.
+			'''
+	}
+
+	Basilisk: {
+		Name: "{$NPCName.DesertBeast}"
+		Attack.Name: Stony Gaze
+		Modifier.Description:
+			'''
+			When this enters, the 
+			enemy in its column 
+			takes 2 dmg, then this 
+			heals 2 dmg
+			'''
+	}
+
+	Vulture: {
+		Name: "{$NPCName.Vulture}"
+		Attack.Name: Scavenge
+		Modifier.Description:
+			'''
+			This has Evasive when
+			attacking enemies in
+			its column.
+			'''
+	}
+
 	Types: {
 		CREATURE: Creature
 		ITEM: Item
