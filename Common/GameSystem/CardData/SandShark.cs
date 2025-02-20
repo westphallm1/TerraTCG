@@ -20,7 +20,7 @@ namespace TerraTCG.Common.GameSystem.CardData
 
 			public void ModifyAttack(ref Attack attack, Zone sourceZone, Zone destZone) 
 			{
-				lastAttackWasInSameColumn = destZone?.Column == sourceZone.Column;
+				lastAttackWasInSameColumn = sourceZone.ColumnAligned(destZone);
 			}
 
 			public bool ShouldRemove(GameEventInfo eventInfo)

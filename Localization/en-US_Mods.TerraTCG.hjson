@@ -2176,7 +2176,7 @@ Cards: {
 				'''
 		}
 
-		Modifier.Description: Zealous.
+		Modifier.Description: Evasive.
 	}
 
 	Ghoul: {
@@ -2240,6 +2240,16 @@ Cards: {
 			This has Evasive when
 			attacking enemies in
 			its column.
+			'''
+	}
+
+	DyeTrader: {
+		Name: "{$NPCName.DyeTrader}'s Dance"
+		Modifier.Description:
+			'''
+			Move target ally to
+			any column (swap it if
+			that column is occupied)
 			'''
 	}
 

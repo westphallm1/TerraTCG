@@ -70,6 +70,20 @@ namespace TerraTCG.Common.GameSystem.GameState.GameActions
         public string GetCantAcceptZoneTooltip(Zone zone) => InsufficientManaFor == "" ? null :
             $"{ActionText("NotEnoughMana")} {ActionText("To")} {InsufficientManaFor}"; 
 
+		internal static int GetAttackDamageWithZoneShifts(Zone srcZone, Zone dstZone)
+		{
+			// TOOD this is exposing a weak point in the ability to modify zones upon
+			// attack declaration
+			var currentCardOrder = srcZone.Siblings.Select(z => z.PlacedCard).ToList();
+			srcZone.Owner.Field.ModifyAttackSourceAndDestZones(ref srcZone, ref dstZone, preCalculating: true);
+			var dmg = srcZone.PlacedCard.GetAttackWithModifiers(srcZone, dstZone).Damage;
+			for (int i = 0; i < currentCardOrder.Count; i++)
+			{
+				srcZone.Siblings[i].PlacedCard = currentCardOrder[i];
+			}
+			return dmg;
+		}
+
         public string GetZoneTooltip(Zone zone)
         {
 
@@ -78,7 +92,7 @@ namespace TerraTCG.Common.GameSystem.GameState.GameActions
                 return $"{ActionText("Move")} {startZone.CardName}";
             } else if (actionType == ActionType.DEFAULT && !player.Owns(zone) && !zone.IsEmpty())
             {
-				var attackDmg = startZone.PlacedCard.GetAttackWithModifiers(startZone, zone).Damage;
+				var attackDmg = GetAttackDamageWithZoneShifts(startZone, zone);
                 return $"{ActionText("Attack")} {zone.CardName} {ActionText("With")} {startZone.CardName} {ActionText("For")} {attackDmg}";
             } else if (actionType == ActionType.TARGET_ALLY && player.Owns(zone) && !zone.IsEmpty())
             {

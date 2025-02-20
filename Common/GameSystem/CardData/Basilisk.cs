@@ -18,7 +18,7 @@ namespace TerraTCG.Common.GameSystem.CardData
 		{
 			public void ModifyCardEntrance(Zone sourceZone) 
 			{
-				var occupiedOpposingZone = sourceZone.Owner.Opponent.Field.Zones.Where(z => z.Column == sourceZone.Column && z.HasPlacedCard())
+				var occupiedOpposingZone = sourceZone.Owner.Opponent.Field.Zones.Where(z => z.ColumnAligned(sourceZone) && z.HasPlacedCard())
 					.FirstOrDefault();
 
 				if(occupiedOpposingZone?.PlacedCard is PlacedCard card)

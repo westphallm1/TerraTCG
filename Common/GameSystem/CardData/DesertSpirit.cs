@@ -22,18 +22,20 @@ namespace TerraTCG.Common.GameSystem.CardData
 
 			public Asset<Texture2D> Texture { get; set; }
 
-			public void ModifyAttackZones(ref Zone sourceZone, ref Zone destZone) 
+			public void ModifyAttackZones(ref Zone sourceZone, ref Zone destZone, bool preCalculating) 
 			{
-				var destIdx = destZone.Index;
-				var sameColumnZone = sourceZone.Siblings.Where(z => z.Index == destIdx % 3).First();
+				var localDestZone = destZone;
+				var sameColumnZone = sourceZone.Siblings.Where(localDestZone.ColumnAligned).First();
 				if(sameColumnZone.IsEmpty())
 				{
 					sameColumnZone.PlacedCard = sourceZone.PlacedCard;
 					sourceZone.PlacedCard = null;
 
-					sameColumnZone.QueueAnimation(new PlaceCardAnimation(sameColumnZone.PlacedCard));
-					sourceZone.QueueAnimation(new RemoveCardAnimation(sameColumnZone.PlacedCard));
-
+					if(!preCalculating)
+					{
+						sameColumnZone.QueueAnimation(new PlaceCardAnimation(sameColumnZone.PlacedCard));
+						sourceZone.QueueAnimation(new RemoveCardAnimation(sameColumnZone.PlacedCard));
+					}
 					sourceZone = sameColumnZone;
 				}
 			}

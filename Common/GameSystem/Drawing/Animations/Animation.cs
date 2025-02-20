@@ -112,8 +112,7 @@ namespace TerraTCG.Common.GameSystem.Drawing.Animations
 				TCGPlayer.LocalGamePlayer.InProgressAction is MoveCardOrAttackAction action &&
 				action.CanAcceptZone(zone) && zone.HasPlacedCard())
 			{
-				var attackOnCreature = action.StartZone.PlacedCard.GetAttackWithModifiers(action.StartZone, zone);
-				expectedDmg = attackOnCreature.Damage;
+				expectedDmg = MoveCardOrAttackAction.GetAttackDamageWithZoneShifts(action.StartZone, zone);
 			}
 
             var font = FontAssets.ItemStack.Value;

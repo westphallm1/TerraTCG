@@ -18,7 +18,7 @@ namespace TerraTCG.Common.GameSystem.CardData
 		{
 			public void ModifyAttack(ref Attack attack, Zone sourceZone, Zone destZone) 
 			{
-				if(sourceZone.Column == destZone?.Column)
+				if(sourceZone.ColumnAligned(destZone))
 				{
 					attack.Cost = Math.Max(1, attack.Cost - 1);
 				}

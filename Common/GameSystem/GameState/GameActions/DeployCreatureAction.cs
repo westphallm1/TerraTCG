@@ -22,7 +22,10 @@ namespace TerraTCG.Common.GameSystem.GameState.GameActions
             ActionText(card.SubTypes.Contains(CardSubtype.EXPERT) ? "Promoted" : "Played") + " " + card.CardName);
 
 		// Force Skeletron and WoF into a central zone
-		private readonly Card[] CenterOnlyCards = [BotDecks.GetCard<Skeletron>(), BotDecks.GetCard<WallOfFlesh>(), BotDecks.GetCard<SkeletronPrime>()];
+		private readonly Card[] CenterOnlyCards = [
+			BotDecks.GetCard<Skeletron>(), BotDecks.GetCard<WallOfFlesh>(), BotDecks.GetCard<SkeletronPrime>(),
+			BotDecks.GetCard<Destroyer>(), BotDecks.GetCard<Twins>(),
+		];
 
 		// Prevent playing any cards adjacent to the WoF
 		private readonly Card[] WholeRowCards = [BotDecks.GetCard<WallOfFlesh>()];

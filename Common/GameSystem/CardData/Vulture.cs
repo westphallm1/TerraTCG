@@ -14,14 +14,14 @@ namespace TerraTCG.Common.GameSystem.CardData
     {
 		private class VultureEvasiveModifier : ICardModifier
 		{
-			public bool AppliesToZone(Zone zone) => zone.Owner.Opponent.Field.Zones.Any(z => z.Column == zone.Column && z.HasPlacedCard());
+			public bool AppliesToZone(Zone zone) => zone.Owner.Opponent.Field.Zones.Any(z => z.ColumnAligned(zone) && z.HasPlacedCard());
 
 			public void ModifyZoneSelection(Zone sourceZone, Zone endZone, ref List<Zone> destZones)
 			{
 				// no-op
 				foreach(var zone in sourceZone.Owner.Opponent.Field.Zones)
 				{
-					if(zone.HasPlacedCard() && zone.Column == sourceZone.Column && !destZones.Contains(zone))
+					if (zone.HasPlacedCard() && zone.ColumnAligned(sourceZone) && !destZones.Contains(zone))
 					{
 						destZones.Add(zone);
 					}

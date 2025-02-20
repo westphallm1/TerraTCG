@@ -41,13 +41,13 @@ namespace TerraTCG.Common.GameSystem.GameState
             }
         }
 
-		internal void ModifyAttackSourceAndDestZones(ref Zone sourceZone, ref Zone destZone)
+		internal void ModifyAttackSourceAndDestZones(ref Zone sourceZone, ref Zone destZone, bool preCalculating = false)
 		{
 			var sourceZoneModifiers = sourceZone.PlacedCard?.CardModifiers ?? [];
 
 			foreach(var modifier in sourceZoneModifiers.Concat(CardModifiers))
 			{
-				modifier.ModifyAttackZones(ref sourceZone, ref destZone);
+				modifier.ModifyAttackZones(ref sourceZone, ref destZone, preCalculating);
 			}
 		}
 

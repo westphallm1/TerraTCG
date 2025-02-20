@@ -50,6 +50,8 @@ namespace TerraTCG.Common.GameSystem.GameState
         // For defense zones, check whether an enemy is in the aligned offense zone
         public bool IsBlocked() => Role == ZoneRole.DEFENSE && !Owner.Field.Zones[Index - 3].IsEmpty();
 
+		internal bool ColumnAligned(Zone other) => Column == 2 - (other?.Column ?? -1);
+
         public void PlaceCard(Card card)
         {
             PlacedCard = new PlacedCard(card)

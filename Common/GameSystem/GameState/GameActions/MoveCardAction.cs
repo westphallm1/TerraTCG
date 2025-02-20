@@ -12,7 +12,7 @@ using static TerraTCG.Common.GameSystem.GameState.GameActions.IGameAction;
 
 namespace TerraTCG.Common.GameSystem.GameState.GameActions
 {
-    internal class MoveCardAction(Card card, GamePlayer player) : TownsfolkAction(card, player)
+    internal class MoveCardAction(Card card, GamePlayer player, bool targetEnemies = true, bool allowSwap = false) : TownsfolkAction(card, player)
     {
         private Zone sourceZone;
         private Zone destZone;
@@ -21,10 +21,24 @@ namespace TerraTCG.Common.GameSystem.GameState.GameActions
 
         private int Step => sourceZone == null ? 0 : 1;
 
-		public override bool CanAcceptZone(Zone zone) => base.CanAcceptZone(zone) &&
-			(Step == 0 ? 
-			!zone.IsEmpty()  && zone.Siblings.Any(z=>z.IsEmpty() && z.Index / 3 == zone.Index / 3):
-			zone.Owner == sourceZone.Owner && zone.IsEmpty() && zone.Index / 3 == sourceZone.Index / 3);
+		public override bool CanAcceptZone(Zone zone)
+		{
+			if(!base.CanAcceptZone(zone))
+			{
+				return false;
+			}
+			if (Step == 0)
+			{
+				return !zone.IsEmpty() && 
+					(targetEnemies || zone.Owner == Player) &&
+					(allowSwap || zone.Siblings.Any(z => z.IsEmpty() && z.Row == zone.Row));
+			} else
+			{
+				return zone.Owner == sourceZone.Owner && 
+					(allowSwap || zone.IsEmpty()) && 
+					zone.Row == sourceZone.Row;
+			}
+		}
 
 
         public override bool AcceptZone(Zone zone)
@@ -50,15 +64,28 @@ namespace TerraTCG.Common.GameSystem.GameState.GameActions
             base.Complete();
             var duration = GetAnimationStartDelay();
 
+			var toMove = destZone.PlacedCard;
             destZone.PlacedCard = sourceZone.PlacedCard;
-            sourceZone.PlacedCard = null;
+			sourceZone.PlacedCard = toMove;
 
             var movedCard = destZone.PlacedCard;
 
             sourceZone.QueueAnimation(new IdleAnimation(movedCard, duration));
             sourceZone.QueueAnimation(new RemoveCardAnimation(movedCard));
+			if(toMove != null)
+			{
+				sourceZone.QueueAnimation(new PlaceCardAnimation(toMove));
+			}
 
-            destZone.QueueAnimation(new NoOpAnimation(duration));
+			if(toMove == null)
+			{
+				destZone.QueueAnimation(new NoOpAnimation(duration));
+			} else
+			{
+				destZone.QueueAnimation(new IdleAnimation(toMove, duration));
+				destZone.QueueAnimation(new RemoveCardAnimation(toMove));
+			}
+
             destZone.QueueAnimation(new PlaceCardAnimation(movedCard));
             GameSounds.PlaySound(GameAction.PLACE_CARD);
         }

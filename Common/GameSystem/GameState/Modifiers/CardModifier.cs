@@ -79,7 +79,7 @@ namespace TerraTCG.Common.GameSystem.GameState.Modifiers
 
 		// Switch the source or destination zone of an attack before
 		// damage is dealt
-        public void ModifyAttackZones(ref Zone sourceZone, ref Zone destZone) 
+        public void ModifyAttackZones(ref Zone sourceZone, ref Zone destZone, bool preCalculating) 
         {
 			// no-op
         }

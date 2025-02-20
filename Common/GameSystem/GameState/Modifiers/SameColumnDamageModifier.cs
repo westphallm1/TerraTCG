@@ -17,7 +17,7 @@ namespace TerraTCG.Common.GameSystem.GameState.Modifiers
 
         public void ModifyAttack(ref Attack attack, Zone sourceZone, Zone destZone)
         {
-			if(sourceZone.Column == (destZone?.Index ?? -1) % 3)
+			if(sourceZone.ColumnAligned(destZone))
 			{
 				attack.Damage += amount;
 			}
