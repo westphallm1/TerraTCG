@@ -22,6 +22,8 @@ namespace TerraTCG.Common.GameSystem.CardData
 
 			public Asset<Texture2D> Texture { get; set; }
 
+			public ModifierType Category => ModifierType.SHIFTING_SANDS;
+
 			public void ModifyAttackZones(ref Zone sourceZone, ref Zone destZone, bool preCalculating) 
 			{
 				var localDestZone = destZone;

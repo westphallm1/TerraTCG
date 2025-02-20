@@ -15,6 +15,7 @@ namespace TerraTCG.Common.GameSystem.CardData
 		private class VultureEvasiveModifier : ICardModifier
 		{
 			public bool AppliesToZone(Zone zone) => zone.Owner.Opponent.Field.Zones.Any(z => z.ColumnAligned(zone) && z.HasPlacedCard());
+			public ModifierType Category => ModifierType.EVASIVE;
 
 			public void ModifyZoneSelection(Zone sourceZone, Zone endZone, ref List<Zone> destZones)
 			{

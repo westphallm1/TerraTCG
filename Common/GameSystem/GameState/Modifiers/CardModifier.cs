@@ -40,7 +40,8 @@ namespace TerraTCG.Common.GameSystem.GameState.Modifiers
 		MORBID,
 		ZEALOUS,
 		CURSED,
-		FREEZING
+		FREEZING,
+		SHIFTING_SANDS
 	}
 
     internal struct GameEventInfo

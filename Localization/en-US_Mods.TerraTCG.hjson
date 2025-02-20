@@ -2293,6 +2293,7 @@ Cards: {
 		MORBID: Morbid: An effect triggers when this dies
 		CURSED: Cursed: Cannot use skills
 		FREEZING: Freezing: Enemy's next attack costs {0} more
+		SHIFTING_SANDS: Shifting Sands: Moves into its target's column when attacking
 	}
 
 	ModifierNames: {
