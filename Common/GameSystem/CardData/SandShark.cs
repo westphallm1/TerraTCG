@@ -42,7 +42,7 @@ namespace TerraTCG.Common.GameSystem.CardData
             MaxHealth = 10,
             CardType = CardType.CREATURE,
             NPCID = NPCID.SandShark,
-            SubTypes = [CardSubtype.EXPERT, CardSubtype.DESERT, CardSubtype.SCOUT],
+            SubTypes = [CardSubtype.EXPERT, CardSubtype.DESERT, CardSubtype.FIGHTER],
 			Modifiers = () => [new SandSharkUnpauseModifier()],
             Attacks = [
                 new() {

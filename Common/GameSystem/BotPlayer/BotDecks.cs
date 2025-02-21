@@ -1083,6 +1083,33 @@ namespace TerraTCG.Common.GameSystem.BotPlayer
                 ]
             };
 
+		internal static CardCollection GetDesertDeck() =>
+            new ()
+            {
+                Cards = [
+                    GetCard<AntlionCharger>(), 
+                    GetCard<AntlionCharger>(), 
+                    GetCard<AntlionSwarmer>(),
+                    GetCard<Guide>(),
+                    GetCard<Guide>(),
+                    GetCard<Ghoul>(),
+                    GetCard<Ghoul>(),
+                    GetCard<Vulture>(),
+                    GetCard<Lamia>(),
+                    GetCard<Lamia>(),
+                    GetCard<ArmsDealer>(),
+                    GetCard<ArmsDealer>(),
+                    GetCard<HealingPotion>(), 
+                    GetCard<HealingPotion>(), 
+                    GetCard<DesertSpirit>(),
+                    GetCard<SandstormInABottle>(),
+                    GetCard<Basilisk>(), 
+                    GetCard<SandShark>(),
+                    GetCard<SandShark>(), 
+                    GetCard<Scorpion>(),
+                ]
+            };
+
 		internal static CardCollection GetBatsDeck() =>
             new ()
             {

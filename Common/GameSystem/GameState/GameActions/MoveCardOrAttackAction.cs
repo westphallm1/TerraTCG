@@ -70,19 +70,22 @@ namespace TerraTCG.Common.GameSystem.GameState.GameActions
         public string GetCantAcceptZoneTooltip(Zone zone) => InsufficientManaFor == "" ? null :
             $"{ActionText("NotEnoughMana")} {ActionText("To")} {InsufficientManaFor}"; 
 
-		internal static int GetAttackDamageWithZoneShifts(Zone srcZone, Zone dstZone)
+		private static Attack GetAttackWithZoneShifts(Zone srcZone, Zone dstZone)
 		{
-			// TOOD this is exposing a weak point in the ability to modify zones upon
-			// attack declaration
 			var currentCardOrder = srcZone.Siblings.Select(z => z.PlacedCard).ToList();
 			srcZone.Owner.Field.ModifyAttackSourceAndDestZones(ref srcZone, ref dstZone, preCalculating: true);
-			var dmg = srcZone.PlacedCard.GetAttackWithModifiers(srcZone, dstZone).Damage;
+			var attack = srcZone.PlacedCard.GetAttackWithModifiers(srcZone, dstZone);
 			for (int i = 0; i < currentCardOrder.Count; i++)
 			{
 				srcZone.Siblings[i].PlacedCard = currentCardOrder[i];
 			}
-			return dmg;
+			return attack;
 		}
+		internal static int GetAttackDamageWithZoneShifts(Zone srcZone, Zone dstZone) =>
+			GetAttackWithZoneShifts(srcZone, dstZone).Damage;
+
+		internal static int GetAttackCostWithZoneShifts(Zone srcZone, Zone dstZone) =>
+			GetAttackWithZoneShifts(srcZone, dstZone).Cost;
 
         public string GetZoneTooltip(Zone zone)
         {
@@ -110,7 +113,7 @@ namespace TerraTCG.Common.GameSystem.GameState.GameActions
 
         private bool CanAttackZone(Zone zone)
         {
-            bool hasEnoughMana = startZone.PlacedCard.GetAttackWithModifiers(startZone, zone).Cost <= player.Resources.Mana;
+            bool hasEnoughMana = GetAttackCostWithZoneShifts(startZone, zone) <= player.Resources.Mana;
             InsufficientManaFor = hasEnoughMana ? "": ActionText("Attack");
             return startZone.HasPlacedCard() && hasEnoughMana &&
 				startZone.PlacedCard.CurrentHealth > 0 && 

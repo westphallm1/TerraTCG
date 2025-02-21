@@ -30,10 +30,11 @@ namespace TerraTCG.Common.GameSystem.CardData
         public override Card CreateCard() => new ()
         {
             Name = "Lamia",
-            MaxHealth = 7,
+            MaxHealth = 6,
             CardType = CardType.CREATURE,
             NPCID = NPCID.DesertLamiaDark,
             SubTypes = [CardSubtype.DESERT, CardSubtype.CASTER],
+			Role = ZoneRole.DEFENSE,
 			FieldModifiers = () => [new LamiaAttackCostDecreaseModifier()],
             Attacks = [
                 new() {

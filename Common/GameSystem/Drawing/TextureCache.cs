@@ -206,6 +206,7 @@ namespace TerraTCG.Common.GameSystem.Drawing
                 [CardSubtype.MUSHROOM] = Main.Assets.Request<Texture2D>("Images/MapBG20"),
                 [CardSubtype.SNOW] = Main.Assets.Request<Texture2D>("Images/MapBG12"),
                 [CardSubtype.HALLOWED] = Main.Assets.Request<Texture2D>("Images/MapBG8"),
+                [CardSubtype.DESERT] = Main.Assets.Request<Texture2D>("Images/MapBG10"),
             };
 			OtherMapBackgrounds = new Dictionary<string, Asset<Texture2D>>
 			{

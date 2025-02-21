@@ -24,9 +24,11 @@ namespace TerraTCG.Common.GameSystem.BotPlayer
 
             if(cardToUse.Role == ZoneRole.OFFENSE)
             {
+				var oppZones = GamePlayer.Opponent.Field.Zones;
                 return GamePlayer.Field.Zones.Where(z => !z.IsEmpty())
                     .Where(z => z.Role == ZoneRole.OFFENSE)
                     .Where(z => cardToUse.ShouldTarget(z))
+                    .Where(z => oppZones.Any(z2=>MoveCardOrAttackAction.GetAttackCostWithZoneShifts(z, z2) <= GamePlayer.Resources.Mana))
                     .OrderByDescending(z => z.PlacedCard.Template.SubTypes.Contains(CardSubtype.BOSS))
                     .ThenByDescending(z => z.PlacedCard.GetAttackWithModifiers(z, null).Damage)
                     .FirstOrDefault();
@@ -54,8 +56,8 @@ namespace TerraTCG.Common.GameSystem.BotPlayer
                 .Where(z => z.Role == ZoneRole.OFFENSE)
 				// Prefer the attack that could do the most damage against any enemy
                 .OrderByDescending(z => 
-					oppZones.Max(z2 => z.PlacedCard.GetAttackWithModifiers(z, z2).Damage))
-                .ThenBy(z=>z.PlacedCard.GetSkillWithModifiers(z, null).Cost)
+					oppZones.Max(z2 => MoveCardOrAttackAction.GetAttackDamageWithZoneShifts(z, z2)))
+                .ThenBy(z=>z.PlacedCard.GetAttackWithModifiers(z, null).Cost)
                 .FirstOrDefault();
 
 			if(bestAttackZone == null)
@@ -72,9 +74,9 @@ namespace TerraTCG.Common.GameSystem.BotPlayer
 				// Always attack bosses when present since they are worth more points
                 .ThenByDescending(z => z.PlacedCard.Template.SubTypes[0] == CardSubtype.BOSS)
 				// Then prioritize cards that are within lethal range
-				.ThenByDescending(z => bestAttackZone.PlacedCard.GetAttackWithModifiers(bestAttackZone, z).Damage >= z.PlacedCard.CurrentHealth)
+				.ThenByDescending(z => MoveCardOrAttackAction.GetAttackDamageWithZoneShifts(bestAttackZone, z) >= z.PlacedCard.CurrentHealth)
 				// Then go for the card against which we'll deal the most damage
-				.ThenByDescending(z => bestAttackZone.PlacedCard.GetAttackWithModifiers(bestAttackZone, z).Damage)
+				.ThenByDescending(z => MoveCardOrAttackAction.GetAttackDamageWithZoneShifts(bestAttackZone, z))
 				// Then go for the card with the least health
                 .ThenBy(z => z.PlacedCard.CurrentHealth)
 				// If multiple cards meet those conditions, choose a random one

@@ -2386,6 +2386,7 @@ Cards: {
 		Hallowed: Hallowed
 		Bats: Bats
 		Critters: Critters
+		Desert: Desert
 	}
 
 	ActionText: {

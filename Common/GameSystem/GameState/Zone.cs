@@ -52,7 +52,7 @@ namespace TerraTCG.Common.GameSystem.GameState
 
 		internal bool ColumnAligned(Zone other) => Column == 2 - (other?.Column ?? -1);
 
-        public void PlaceCard(Card card)
+        public void PlaceCard(Card card, int initialDamage = 0)
         {
             PlacedCard = new PlacedCard(card)
             {
@@ -60,6 +60,7 @@ namespace TerraTCG.Common.GameSystem.GameState
                 PlaceTime = TCGPlayer.TotalGameTime,
                 CardModifiers = [.. card.Modifiers?.Invoke() ?? []],
                 FieldModifiers = [.. card.FieldModifiers?.Invoke() ?? []],
+				CurrentHealth = card.MaxHealth - initialDamage,
             };
 
 			Owner.Field.CardModifiers.AddRange(PlacedCard.FieldModifiers);
@@ -72,18 +73,17 @@ namespace TerraTCG.Common.GameSystem.GameState
         public void PromoteCard(Card newCard)
         {
             var leavingCard = PlacedCard;
-            QueueAnimation(new RemoveCardAnimation(leavingCard));
-            QueueAnimation(new PlaceCardAnimation(new PlacedCard(newCard)));
-
             var dmgTaken = leavingCard.Template.MaxHealth - leavingCard.CurrentHealth;
+            QueueAnimation(new RemoveCardAnimation(leavingCard));
+            QueueAnimation(new PlaceCardAnimation(new PlacedCard(newCard) {  CurrentHealth = newCard.MaxHealth - dmgTaken }));
+
             // Keep all item-sourced modifiers on the card post-promotion,
             // Remove debuffs
             var itemModifiers = leavingCard.CardModifiers
                 .Where(m => m.Source == CardSubtype.EQUIPMENT || m.Source == CardSubtype.CONSUMABLE)
                 .ToList();
-            PlaceCard(newCard);
+            PlaceCard(newCard, dmgTaken);
             PlacedCard.IsExerted = false;
-            PlacedCard.CurrentHealth -= dmgTaken;
             PlacedCard.AddModifiers(itemModifiers);
 
             GameSounds.PlaySound(GameAction.PROMOTE_CARD);

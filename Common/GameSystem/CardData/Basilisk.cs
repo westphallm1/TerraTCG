@@ -23,7 +23,10 @@ namespace TerraTCG.Common.GameSystem.CardData
 
 				if(occupiedOpposingZone?.PlacedCard is PlacedCard card)
 				{
+					var waitDuration = sourceZone.QueuedAnimationDuration();
 					sourceZone.QueueAnimation(new ActionAnimation(sourceZone.PlacedCard));
+
+					occupiedOpposingZone.QueueAnimation(new IdleAnimation(card, waitDuration, card.CurrentHealth));
 					occupiedOpposingZone.QueueAnimation(new TakeDamageAnimation(card, card.CurrentHealth));
 					card.CurrentHealth -= 2;
 
@@ -39,9 +42,7 @@ namespace TerraTCG.Common.GameSystem.CardData
             CardType = CardType.CREATURE,
             NPCID = NPCID.DesertBeast,
             SubTypes = [CardSubtype.EXPERT, CardSubtype.DESERT, CardSubtype.FIGHTER],
-			FieldModifiers = () => [
-				new BasiliskOnEnterDealDmgModifier(),
-			],
+			Modifiers = () => [ new BasiliskOnEnterDealDmgModifier() ],
             Attacks = [
                 new() {
                     Damage = 4,

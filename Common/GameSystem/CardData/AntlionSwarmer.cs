@@ -18,7 +18,7 @@ namespace TerraTCG.Common.GameSystem.CardData
             MaxHealth = 7,
             CardType = CardType.CREATURE,
             NPCID = NPCID.FlyingAntlion,
-            SubTypes = [CardSubtype.DESERT, CardSubtype.SCOUT],
+            SubTypes = [CardSubtype.DESERT, CardSubtype.FIGHTER],
             Attacks = [
                 new() {
                     Damage = 2,

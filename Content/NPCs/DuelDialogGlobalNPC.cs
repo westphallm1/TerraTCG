@@ -230,6 +230,10 @@ namespace TerraTCG.Content.NPCs
                 new("Bats", BotDecks.GetBatsDeck(), [GetReward<BatPack>(2), GetReward<InvitationToDuel>(2)], ["WoF"]),
                 new("Critters", BotDecks.GetCrittersDeck(), [GetReward<CritterPack>(2), GetReward<InvitationToDuel>(2)], ["WoF"]),
             ],
+
+            [NPCID.DyeTrader] = [
+                new("Desert", BotDecks.GetDesertDeck(), [GetReward<ForestPack>(2), GetReward<InvitationToDuel>(2)], ["WoF"]),
+            ],
 			// Bosses
 			[NPCID.QueenBee] = [
 				new("QueenBee", BotDecks.GetQueenBeeDeck(), [GetReward<QueenBeePack>(2), GetReward<InvitationToDuel>(2)], sleeve: CardSleeve.JUNGLE),
