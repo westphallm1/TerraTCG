@@ -1,0 +1,2106 @@
+Items: {
+	TerraTCGDeckbox: {
+		DisplayName: Коробка для колоды TerraTCG
+		Tooltip:
+			'''
+			Коробка для колоды TerraTCG! Открой её, чтобы редактировать
+			свои колоды. Вызови NPC на игру в TerraTCG, заговорив с ними.
+			'''
+	}
+
+	TerraTCGDebugDeckbox: {
+		DisplayName: Terra TCG Debug Deckbox
+		Tooltip:
+			'''
+			Открывает редактор колод TerraTCG с доступом
+			ко всем картам.
+			'''
+	}
+
+	TerraTCGBoosterPack: {
+		DisplayName: Бустер-пак TerraTCG
+		Tooltip:
+			'''
+			Бустер-пак TerraTCG! Открой его, чтобы получить 3 случайные карты!
+			Собери свою колоду с помощью коробки для колоды TerraTCG.
+			'''
+	}
+
+	CavernPack: {
+		DisplayName: Пак Пещер
+		Tooltip:
+			'''
+			Бустер-пак TerraTCG! Содержит карты 
+			на тему пещер. Собери свою колоду 
+			с помощью коробки для колоды TerraTCG.
+			'''
+	}
+
+	DungeonPack: {
+		DisplayName: Пак Темницы
+		Tooltip:
+			'''
+			Бустер-пак TerraTCG! Содержит карты
+			на тему темницы. Собери свою колоду
+			с помощью коробки для колоды TerraTCG.
+			'''
+	}
+
+	EvilPack: {
+		DisplayName: Пак Зла
+		Tooltip:
+			'''
+			Бустер-пак TerraTCG! Содержит карты
+			на тему мирового зла. Собери свою колоду
+			с помощью коробки для колоды TerraTCG.
+			'''
+	}
+
+	ForestPack: {
+		DisplayName: Пак Леса
+		Tooltip:
+			'''
+			Бустер-пак TerraTCG! Содержит карты
+			Содержит карты на тему леса. Собери свою колоду
+			с помощью коробки для колоды TerraTCG.
+			'''
+	}
+
+	GoblinPack: {
+		DisplayName: Пак Гоблинов
+		Tooltip:
+			'''
+			Бустер-пак TerraTCG! Содержит карты
+			на тему гоблинов. Собери свою колоду
+			с помощью коробки для колоды TerraTCG.
+			'''
+	}
+
+	JunglePack: {
+		DisplayName: Пак Джунглей
+		Tooltip:
+			'''
+			Бустер-пак TerraTCG! Содержит карты
+			на тему джунглей. Собери свою колоду
+			с помощью коробки для колоды TerraTCG.
+			'''
+	}
+
+	KingSlimePack: {
+		DisplayName: Промо-карты Короля Слизней
+		Tooltip:
+			'''
+			Промо-пак TerraTCG! Содержит редкие
+			карты Короля Слизней! Собери свою колоду
+			с помощью коробки для колоды TerraTCG.
+			'''
+	}
+
+	MushroomPack: {
+		DisplayName: Пак Грибов
+		Tooltip:
+			'''
+			Бустер-пак TerraTCG! Содержит карты
+			на тему грибов. Собери свою колоду
+			с помощью коробки для колоды TerraTCG.
+			'''
+	}
+
+	OceanPack: {
+		DisplayName: Пак Океана
+		Tooltip:
+			'''
+			Бустер-пак TerraTCG! Содержит карты
+			на тему океана. Собери свою колоду
+			с помощью коробки для колоды TerraTCG.
+			'''
+	}
+
+	QueenBeePack: {
+		DisplayName: Промо-карты Королевы Пчёл
+		Tooltip:
+			'''
+			Промо-пак TerraTCG! Содержит редкие
+			карты Королевы Пчёл! Собери свою колоду
+			с помощью коробки для колоды TerraTCG.
+			'''
+	}
+
+	SlimePack: {
+		DisplayName: Пак Слизней
+		Tooltip:
+			'''
+			Бустер-пак TerraTCG! Содержит карты
+			на тему слизней. Собери свою колоду
+			с помощью коробки для колоды TerraTCG.
+			'''
+	}
+
+	BloodMoonPack: {
+		DisplayName: Пак Кровавой Луны
+		Tooltip:
+			'''
+			Бустер-пак TerraTCG! Содержит карты
+			на тему кровавой луны. Собери свою колоду
+			с помощью коробки для колоды TerraTCG.
+			'''
+	}
+
+	MimicPack: {
+		DisplayName: Промо-карты Мимика
+		Tooltip:
+			'''
+			Промо-пак TerraTCG! Содержит редкие 
+			карты Мимика! Собери свою колоду
+			с помощью коробки для колоды TerraTCG.
+			'''
+	}
+
+	InvitationToDuel: {
+		DisplayName: Приглашение на дуэль!
+		Tooltip:
+			'''
+			Поставь свою душу ради славы в TerraTCG!
+			Используй в присутствии любого босса до хардмода,
+			чтобы начать игру в TerraTCG с душой на кону.
+			Будь осторожен, последствия поражения смертельны!
+			'''
+	}
+
+	BOCPack: {
+		DisplayName: Промо-карты Мозга Ктулху
+		Tooltip:
+			'''
+			Промо-пак TerraTCG! Содержит редкие 
+			карты Мозга Ктулху! Собери свою колоду
+			с помощью коробки для колоды TerraTCG.
+			'''
+	}
+
+	EOCPack: {
+		DisplayName: Промо-карты Глаза Ктулху
+		Tooltip:
+			'''
+			Промо-пак TerraTCG! Содержит редкие
+			карты Глаза Ктулху! Собери свою колоду
+			с помощью коробки для колоды TerraTCG.
+			'''
+	}
+
+	EOWPack: {
+		DisplayName: Промо-карты Пожирателя Миров
+		Tooltip:
+			'''
+			Промо-пак TerraTCG! Содержит редкие
+			карты Пожирателя Миров! Собери свою колоду
+			с помощью коробки для колоды TerraTCG.
+			'''
+	}
+
+	SkeletronPack: {
+		DisplayName: Промо-карты Скелетрона
+		Tooltip:
+			'''
+			Промо-пак TerraTCG! Содержит редкие
+			карты Скелетрона! Собери свою колоду
+			с помощью коробки для колоды TerraTCG.
+			'''
+	}
+
+	WOFPack: {
+		DisplayName: Промо-карты Стены Плоти
+		Tooltip:
+			'''
+			Промо-пак TerraTCG! Содержит редкие
+			карты Стены Плоти! Собери свою колоду
+			с помощью коробки для колоды TerraTCG.
+			'''
+	}
+}
+
+Cards: {
+	GiantShelly: {
+		Name: Гигантс. Улитка
+		Attack.Name: Шипаст.Панц.
+
+		Skill: {
+			Name: Навык: Прочный Панцирь
+			Description:
+				'''
+				Ваши Саламандры и
+				и Речные раки полу-
+				чают на 1 урон
+				меньше в этом ходу.
+				'''
+		}
+	}
+
+	Crawdad: {
+		Name: "{$NPCName.Crawdad}"
+		Attack.Name: Клешни
+
+		Skill: {
+			Name: Навык: Поддержка
+			Description:
+				'''
+				Ваши Саламандры и 
+				Улитки наносят +1 
+				урона в этом ходу
+				'''
+		}
+	}
+
+	Salamander: {
+		Name: "{$NPCName.Salamander}"
+		Attack.Name: Плевок
+
+		Skill: {
+			Name: Навык: Чешуя
+			Description:
+				'''
+				Ваши Речные раки и 
+				Улитки атакуют, 
+				тратя на 1 MP меньше
+				в этом ходу
+				'''
+		}
+	}
+
+	Zombie: {
+		Name: "{$NPCName.Zombie}"
+		Attack.Name: Укус Зомби
+	}
+
+	GreenSlime: {
+		Name: "{$NPCName.GreenSlime}"
+		Attack.Name: Шар Слизи
+	}
+
+	BlueSlime: {
+		Name: "{$NPCName.BlueSlime}"
+		Attack.Name: Удар Слизи
+	}
+
+	MotherSlime: {
+		Name: "{$NPCName.MotherSlime}"
+
+		Attack: {
+			Name: Рой Слизней
+			Description:
+				'''
+				Наносит +1 урон за
+				за каждого союзного
+				слизня.
+				'''
+		}
+	}
+
+	SlimedZombie: {
+		Name: Слизист. Зомби
+
+		Attack: {
+			Name: Укус
+			Description:
+				'''
+				Наносит +1 урон если
+				есть союзный слизень.
+				'''
+		}
+
+		Modifier.Description:
+			'''
+			Получает -1 урон если
+			есть союзный слизень
+			'''
+	}
+
+	Pinky: {
+		Name: "{$NPCName.Pinky}"
+
+		Attack: {
+			Name: Розов. слизь
+			Description:
+				'''
+				Стоит на 1 MP меньше
+				за каждого союзного 
+				слизня.
+				'''
+		}
+	}
+
+	FrozenZombie: {
+		// Name: Frozen Zombie
+		// Attack.Name: Icy Bite
+		/* Modifier.Description:
+			'''
+			Freezing: Enemies' next 
+			attack costs +1 MP
+			''' */
+	}
+
+	IceBat: {
+		// Name: "{$NPCName.IceBat}"
+		// Attack.Name: Snow Swoop
+		/* Modifier.Description:
+			'''
+			Freezing: Enemies' next 
+			attack costs +1 MP.
+			Evasive.
+			''' */
+	}
+
+	SnowFlinx: {
+		// Name: "{$NPCName.SnowFlinx}"
+
+		Attack: {
+			// Name: Deep Snow
+			/* Description:
+				'''
+				Target enemy's next
+				attack costs +1 MP.
+				''' */
+		}
+	}
+
+	Penguin: {
+		// Name: "{$NPCName.Penguin}"
+		// Attack.Name: Waddle
+
+		Skill: {
+			// Name: Skill: Snow Song
+			/* Description:
+				'''
+				Target ally gains 
+				Freezing (Enemies' 
+				attacks cost +1)
+				''' */
+		}
+	}
+
+	FaceMonster: {
+		Name: "{$NPCName.FaceMonster}"
+
+		Attack: {
+			Name: Зубаст.Пасть
+			Description:
+				'''
+				Цель атаки получает
+				"Кровотечение" (+1
+				получ. урон от атак.)
+				'''
+		}
+	}
+
+	Crimera: {
+		Name: "{$NPCName.Crimera}"
+
+		Attack: {
+			Name: Кровососание
+			Description:
+				'''
+				Цель атаки получает
+				"Кровотечение" (+1
+				получ. урон от атак.)
+				'''
+		}
+	}
+
+	Creeper: {
+		Name: "{$NPCName.Creeper}"
+		Modifier.Description:
+			'''
+			Помощник босса: Атаки
+			союзного Мозга Ктулху
+			вызывают кровотечение.
+			'''
+		Attack.Name: Злой Взгляд
+	}
+
+	BrainOfCthulhu: {
+		Name: "{$NPCName.BrainofCthulhu}"
+		Modifier.Description:
+			'''
+			Кровожадность: +2 
+			урона по кровоточащим
+			врагам. Ревностный.
+			'''
+		Attack.Name: Головн. Боль
+	}
+
+	QueenBee: {
+		Name: "{$NPCName.QueenBee}"
+		Modifier.Description:
+			'''
+			Королевский мёд: Враги
+			получают яд, когда
+			атакуют союзника.
+			'''
+		Attack.Name: Жужжание
+	}
+
+	SpikedSlime: {
+		Name: Шипаст. слизень
+		Modifier.Description:
+			'''
+			Помощник босса:С шипами.
+			У союзного Короля 
+			Слизней появляются
+			Шипы.
+			'''
+		Attack.Name: Помощник
+	}
+
+	KingSlime: {
+		Name: "{$NPCName.KingSlime}"
+
+		Skill: {
+			Name: Королевский Указ
+			Description:
+				'''
+				Все союзные Слизни
+				наносят +1 урона в 
+				этом ходу и
+				восстанавливают 1 HP
+				'''
+		}
+
+		Attack.Name: Прыжок
+	}
+
+	MushroomZombie: {
+		Name: "{$NPCName.ZombieMushroom}"
+		Attack.Name: Грибной укус
+		Modifier.Description:
+			'''
+			Похищение Жизни:
+			Восстанавливает 1 HP
+			после атаки.
+			'''
+	}
+
+	SporeSkeleton: {
+		Name: Споров. Скелет
+		Attack.Name: Грибн. Кость
+		Modifier.Description:
+			'''
+			Похищение Жизни:
+			Восстанавливает 1 HP
+			после атаки.
+			'''
+	}
+
+	SporeBat: {
+		Name: Спор. лет. мышь
+		Attack.Name: Споров. Укус
+		Modifier.Description:
+			'''
+			Похищение Жизни,
+			Обход
+			'''
+	}
+
+	GlowingSnail: {
+		Name: Светящ. Улитка
+		Attack.Name: Светящ. Панц.
+
+		Skill: {
+			Name: Навык: Споры
+			Description:
+				'''
+				Союзники получают 
+				эффект Похищение Жизни
+				в этом ходу (восстана-
+				вливают 1 HP после атаки)
+				'''
+		}
+	}
+
+	AnomuraFungus: {
+		Name: Грибн.рак-отш.
+
+		Attack: {
+			Name: Инфекция
+			Description:
+				'''
+				Союзники, атакующие 
+				цель получают +1 HP.
+				'''
+		}
+
+		Modifier.Description:
+			'''
+			Похищение Жизни:
+			Восстанавливает 1 HP
+			после атаки.
+			'''
+	}
+
+	Wraith: {
+		Name: "{$NPCName.Wraith}"
+		Attack.Name: Охота
+		Modifier.Description:
+			'''
+			Обход: Может ата-
+			ковать любых врагов
+			'''
+	}
+
+	PosessedArmor: {
+		Name: Одерж. доспехи
+		Attack.Name: Проклятие
+		Modifier.Description:
+			'''
+			Стойкость: Получает
+			на 1 урон меньше
+			от атак.
+			'''
+	}
+
+	ServantOfCthulhu: {
+		Name: Слуга Ктулху
+		Modifier.Description:
+			'''
+			Помощник босса: Союзный
+			Глаз Ктулху получает 
+			эффект "Стойкость" если
+			у него меньше половины HP.
+			'''
+		Attack.Name: Помощник
+	}
+
+	EyeOfCthulhu: {
+		Name: "{$NPCName.EyeofCthulhu}"
+		Modifier.Description:
+			'''
+			Обход: Может ата-
+			ковать любых врагов
+			'''
+
+		Attack: {
+			Name: Глазной укус
+			Description:
+				'''
+				Если меньше половины
+				HP, наносит двойной
+				урон.
+				'''
+		}
+	}
+
+	WanderingEye: {
+		Name: Блужд. глаз
+		Modifier.Description:
+			'''
+			Обход: Может ата-
+			ковать любых врагов
+			'''
+
+		Attack: {
+			Name: Глазной укус
+			Description:
+				'''
+				Если меньше половины
+				HP, наносит +2 урона
+				'''
+		}
+	}
+
+	DemonEye: {
+		Name: Демонич. глаз
+		Attack.Name: Злой Взгляд
+		Modifier.Description:
+			'''
+			Обход: Может ата-
+			ковать любых врагов
+			'''
+	}
+
+	Drippler: {
+		Name: "{$NPCName.Drippler}"
+
+		Attack: {
+			Name: Капли крови
+			Description:
+				'''
+				Наносит +2 урона в ходу,
+				когда это существо выходит
+				'''
+		}
+
+		Modifier.Description:
+			'''
+			Ревностный: Карта может
+			действовать в ход,
+			когда появляется
+			'''
+	}
+
+	WanderingEyeFish: {
+		Name: Рыба-глаз
+		Attack.Name: Кров. Взгляд
+		Modifier.Description: Ревностный, Обход
+	}
+
+	ZombieMerman: {
+		Name: "{$NPCName.ZombieMerman}"
+		Attack.Name: Затягивание
+	}
+
+	ViciousGoldfish: {
+		Name: Кровавая рыба
+
+		Attack: {
+			Name: Кров. Чешуя
+			Description:
+				'''
+				Наносит +1 урона в ходу,
+				когда это существо выходит
+				'''
+		}
+
+		Modifier.Description:
+			'''
+			Ревностный: Карта может
+			действовать в ход,
+			когда появляется
+			'''
+	}
+
+	ViciousBunny: {
+		Name: Свиреп. кролик
+		Attack.Name: Кровав. Пинок
+
+		Skill: {
+			Name: Навык: Поддержка
+			Description:
+				'''
+				Союзник наносит +1 урона 
+				в этом ходу и получает
+				Кровотечение (получает
+				по себе +1 урон)
+				'''
+		}
+	}
+
+	BloodZombie: {
+		Name: "{$NPCName.BloodZombie}"
+
+		Attack: {
+			Name: Кровав. Слеза
+			Description:
+				'''
+				Наносит +1 урона в ходу,
+				когда это существо выходит
+				'''
+		}
+
+		Modifier.Description:
+			'''
+			Ревностный: Карта может
+			действовать в ход,
+			когда появляется
+			'''
+	}
+
+	Harpy: {
+		Name: "{$NPCName.Harpy}"
+
+		Attack: {
+			Name: Пикир. Удар
+			Description:
+				'''
+				Все союзники могут ата-
+				ковать цель с блоком
+				'''
+		}
+
+		Modifier.Description:
+			'''
+			Обход: Может ата-
+			ковать любых врагов
+			'''
+	}
+
+	JungleTurtle: {
+		Name: Черепаха
+		Attack.Name: Панцирь
+
+		Skill: {
+			Name: Навык: Защитник
+			Description:
+				'''
+				Ваш противник обязан
+				атаковать это существо
+				в следующий ход
+				'''
+		}
+	}
+
+	GiantTortoise: {
+		Name: Гиган. черепаха
+		Attack.Name: УдарПанцирем
+		Modifier.Description:
+			'''
+			Шипованный Панцирь:
+			С шипами.Враги не
+			могут атаковать союз-
+			ника с наименьшим HP.
+			'''
+	}
+
+	Piranha: {
+		Name: "{$NPCName.Piranha}"
+
+		Attack: {
+			Name: Укус
+			Description:
+				'''
+				Цель атаки получает
+				"Кровотечение" (+1
+				получ. урон от атак.)
+				'''
+		}
+	}
+
+	MossHornet: {
+		Name: Замш. шершень
+
+		Attack: {
+			Name: Мшист. Жало
+			Description:
+				'''
+				Отравляет цель (она
+				будет получать 1 урон
+				каждый ход)
+				'''
+		}
+	}
+
+	Hornet: {
+		Name: "{$NPCName.Hornet}"
+
+		Attack: {
+			Name: Жало
+			Description:
+				'''
+				Отравляет цель (она
+				будет получать 1 урон
+				каждый ход)
+				'''
+		}
+	}
+
+	Bee: {
+		Name: "{$NPCName.Bee}"
+		Attack.Name: Жало
+
+		Skill: {
+			Name: Навык: Ядовит. Мёд
+			Description:
+				'''
+				Целевой союзник отрав- 
+				ляет врагов в этом хо-
+				ду (они будут получать 
+				1 урон за ход).
+				'''
+		}
+	}
+
+	SpikedJungleSlime: {
+		Name: Слизень джунг.
+		Attack.Name: Токсич. слизь
+		Modifier.Description:
+			'''
+			С шипами: Существо,
+			атакующее эту карту,
+			получает 2 урона.
+			'''
+	}
+
+	DoctorBones: {
+		Name: "{$NPCName.DoctorBones}"
+
+		Attack: {
+			Name: Найти Фауну
+			Description:
+				'''
+				Наносит +1 урон за каждую
+				союзную Живность.
+				'''
+		}
+	}
+
+	Crab: {
+		Name: "{$NPCName.Crab}"
+		Attack.Name: Клешня
+		Modifier.Description:
+			'''
+			Неутомимый: Может ата-
+			ковать дополнительно
+			ещё раз каждый ход.
+			'''
+	}
+
+	Jellyfish: {
+		Name: Медуза
+		Attack.Name: Жало
+		Modifier.Description:
+			'''
+			Неутомимый: Может ата-
+			ковать дополнительно
+			ещё раз каждый ход.
+			'''
+	}
+
+	Shark: {
+		Name: "{$NPCName.Shark}"
+		Attack.Name: Челюсти
+		Modifier.Description:
+			'''
+			Неутомимый: Может ата-
+			ковать дополнительно
+			ещё раз каждый ход.
+			'''
+	}
+
+	FeralClaws: {
+		Name: "{$ItemName.FeralClaws}"
+
+		Skill: {
+			Name: Экипировать
+			Description:
+				'''
+				Существо получает
+				эффект "Неутомимый"
+				(оно может атаковать
+				дополнительно еще 
+				раз каждый ход.)
+				'''
+		}
+	}
+
+	Tim: {
+		Name: "{$NPCName.Tim}"
+
+		Attack: {
+			Name: Волш.Ракета
+			Description:
+				'''
+				Наносит 1 урон за
+				каждый использованный
+				вами предмет в игре.
+				'''
+		}
+	}
+
+	LostGirl: {
+		Name: "{$NPCName.LostGirl}"
+		Attack.Name: Ложные Слезы
+		Modifier.Description:
+			'''
+			Если в этом ходу вы
+			берёте карту с
+			предметом, эта карта
+			трансформируется.
+			'''
+	}
+
+	Nymph: {
+		Name: "{$NPCName.Nymph}"
+		Attack.Name: Опутывание
+		Modifier.Description:
+			'''
+			Обход: Может ата-
+			ковать любых врагов
+			'''
+	}
+
+	Dryad: {
+		Name: Попечение дриады
+		Modifier.Description:
+			'''
+			Верните целевое союзное,
+			не экспертное существо
+			без паузы в руку
+			'''
+	}
+
+	PartyGirl: {
+		Name: Одолжение тусовщицы
+		Modifier.Description:
+			'''
+			Снимает паузу с целево-
+			го союзника. Его атака
+			в этом ходу стоит
+			на 1 MP меньше 
+			'''
+	}
+
+	Nurse: {
+		Name: Забота медсестры
+		Modifier.Description:
+			'''
+			Целевой союзник восста-
+			навливает 3 HP.
+			Убирает у него все
+			дебаффы
+			'''
+	}
+
+	TorturedSoul: {
+		Name: Измученная Душа
+		Modifier.Description:
+			'''
+			Если у вас меньше
+			HP чем у противника,
+			возьмите карту Босса
+			из колоды в руку
+			'''
+	}
+
+	ArmsDealer: {
+		Name: Цель оружейника
+		Modifier.Description:
+			'''
+			Снимает паузу с целево-
+			го союзника. Его атака
+			наносит +2 урона в 
+			этом ходу
+			'''
+	}
+
+	Guide: {
+		Name: Наставление гида
+		Modifier.Description: Возьмите 2 карты
+	}
+
+	Wizard: {
+		Name: Мудрость волшебника
+		Modifier.Description: Добавляет 1 MP
+	}
+
+	OldMan: {
+		Name: Проклятие старика
+		Modifier.Description:
+			'''
+			Переместите целевое существо
+			в незанятую колонку
+			'''
+	}
+
+	Shuriken: {
+		Name: "{$ItemName.Shuriken}"
+
+		Skill: {
+			Name: Использовать
+			Description:
+				'''
+				Целевое существо 
+				накладывает эффект 
+				Кровотечения в этом
+				ходу (Враги получают
+				+1 урон)
+				'''
+		}
+	}
+
+	LightsBane: {
+		Name: "{$ItemName.LightsBane}"
+
+		Skill: {
+			Name: Экипировать
+			Description:
+				'''
+				Если целевое существо 
+				погибает, другие
+				союзные существа
+				наносят +1 урон.
+				'''
+		}
+	}
+
+	BloodButcherer: {
+		Name: "{$ItemName.BloodButcherer}"
+
+		Skill: {
+			Name: Экипировать
+			Description:
+				'''
+				Целевое существо 
+				накладывает эффект 
+				Кровотечения (Враги 
+				получают +1 урон)
+				'''
+		}
+	}
+
+	PoisonedKnife: {
+		Name: "{$ItemName.PoisonedKnife}"
+
+		Skill: {
+			Name: Использовать
+			Description:
+				'''
+				Целевое существо 
+				накладывает яд в 
+				этом ходу (Враги
+				получат 1 урон за ход)
+				'''
+		}
+	}
+
+	BladeOfGrass: {
+		Name: "{$ItemName.BladeofGrass}"
+
+		Skill: {
+			Name: Экипировать
+			Description:
+				'''
+				Целевое существо 
+				накладывает отрав-
+				ление (Враги полу-
+				чат 1 урон за ход)
+				'''
+		}
+	}
+
+	CopperShortsword: {
+		Name: "{$ItemName.CopperShortsword}"
+
+		Skill: {
+			Name: Экипировать
+			Description:
+				'''
+				Целевое существо
+				наносит +1 урон.
+				'''
+		}
+	}
+
+	PlatinumBroadsword: {
+		Name: "{$ItemName.PlatinumBroadsword}"
+
+		Skill: {
+			Name: Экипировать
+			Description:
+				'''
+				Целевое существо
+				наносит +2 урона.
+				'''
+		}
+	}
+
+	Muramasa: {
+		Name: "{$ItemName.Muramasa}"
+
+		Skill: {
+			Name: Экипировать
+			Description:
+				'''
+				Атаки целевого
+				существа стоят на
+				1 MP меньше.
+				'''
+		}
+	}
+
+	Shackle: {
+		Name: "{$ItemName.Shackle}"
+
+		Skill: {
+			Name: Экипировать
+			Description:
+				'''
+				Целевое существо
+				получит -2 урона от
+				следующей атаки против
+				себя. Затем, кандалы
+				удаляются
+				'''
+		}
+	}
+
+	CobaltShield: {
+		Name: "{$ItemName.CobaltShield}"
+
+		Skill: {
+			Name: Экипировать
+			Description:
+				'''
+				Целевое существо
+				получает -1 урон
+				от атак.
+				'''
+		}
+	}
+
+	SwiftnessPotion: {
+		Name: "{$ItemName.SwiftnessPotion}"
+
+		Skill: {
+			Name: Использовать
+			Description:
+				'''
+				Снимает паузу с 
+				целевого существа
+				'''
+		}
+	}
+
+	ThornsPotion: {
+		Name: "{$ItemName.ThornsPotion}"
+
+		Skill: {
+			Name: Использовать
+			Description:
+				'''
+				В следующий ход враги,
+				атакующие целевое
+				существо получат
+				2 урона.
+				'''
+		}
+	}
+
+	IronskinPotion: {
+		Name: "{$ItemName.IronskinPotion}"
+
+		Skill: {
+			Name: Использовать
+			Description:
+				'''
+				В следующий ход це-
+				левое существо получит
+				на 2 меньше урона от
+				всех атак
+				'''
+		}
+	}
+
+	LesserHealingPotion: {
+		Name: "{$ItemName.HealingPotion}"
+
+		Skill: {
+			Name: Использовать
+			Description:
+				'''
+				Целевое существо
+				восстанавливает 3 HP
+				'''
+		}
+	}
+
+	AngelStatue: {
+		Name: "{$ItemName.AngelStatue}"
+
+		Skill: {
+			Name: Использовать
+			Description:
+				'''
+				Целевое существо
+				ничего не делает.
+				'''
+		}
+	}
+
+	RagePotion: {
+		Name: "{$ItemName.RagePotion}"
+
+		Skill: {
+			Name: Использовать
+			Description:
+				'''
+				В этом ходу целевое
+				существо наносит
+				+2 урона
+				'''
+		}
+	}
+
+	ThrowingKnife: {
+		Name: "{$ItemName.ThrowingKnife}"
+
+		Skill: {
+			Name: Использовать
+			Description:
+				'''
+				Следующая атака це-
+				левого существа
+				наносит +1 урон.
+				'''
+		}
+	}
+
+	FledglingWings: {
+		Name: Крылья птенца
+
+		Skill: {
+			Name: Экипировать
+			Description:
+				'''
+				Целевое существо полу-
+				чает Обход (оно может 
+				атаковать любых врагов)
+				'''
+		}
+	}
+
+	GoblinThief: {
+		Name: "{$NPCName.GoblinThief}"
+		Attack.Name: Заточка
+
+		Skill: {
+			Name: Навык: Карманник
+			Description:
+				'''
+				Если в этом ходу вы
+				использовали предмет,
+				возьмите 1 карту.
+				'''
+		}
+	}
+
+	GoblinScout: {
+		Name: Гоблин-разведч.
+
+		Attack: {
+			Name: Разведка
+			Description:
+				'''
+				Наносит +1 урон за
+				каждый предмет
+				использованный в
+				этом ходу
+				'''
+		}
+
+		Modifier.Description:
+			'''
+			Ревностный: Карта может
+			действовать в ход,
+			когда появляется
+			'''
+	}
+
+	GoblinArcher: {
+		Name: "{$NPCName.GoblinArcher}"
+
+		Attack: {
+			Name: Выстрел
+			Description:
+				'''
+				Наносит +1 урон за
+				каждый предмет
+				использованный в
+				этом ходу
+				'''
+		}
+
+		Modifier.Description:
+			'''
+			Обход: Может
+			выбрать любого врага
+			для атаки
+			'''
+	}
+
+	GoblinWarlock: {
+		Name: Чернокнижник
+
+		Attack: {
+			Name: Тенев. пламя
+			Description:
+				'''
+				Наносит +1 урон
+				за каждый исполь-
+				зованный предмет
+				'''
+		}
+	}
+
+	Mimic: {
+		Name: "{$NPCName.Mimic}"
+
+		Attack: {
+			Name: Приманка
+			Description:
+				'''
+				Стоимость снижается на
+				1 за каждый исполь-
+				зованный предмет
+				'''
+		}
+
+		Modifier.Description:
+			'''
+			Стойкость: Получает
+			на 1 урон меньше
+			от атак.
+			'''
+	}
+
+	IceMimic: {
+		// Name: "{$NPCName.IceMimic}"
+
+		Attack: {
+			// Name: Frozen Lure
+			/* Description:
+				'''
+				Cost reduced by target's 
+				attack cost.
+				''' */
+		}
+
+		/* Modifier.Description:
+			'''
+			Freezing: Enemies' next 
+			attack costs +1 MP.
+			''' */
+	}
+
+	IceElemental: {
+		// Name: "{$NPCName.IceElemental}"
+		/* Modifier.Description:
+			'''
+			Freezing: Enemies' next 
+			attack costs +1 MP.
+			''' */
+
+		Attack: {
+			// Name: Ice Crystals
+			/* Description:
+				'''
+				Deals dmg equal to
+				target's attack cost.
+				''' */
+		}
+	}
+
+	IceTortoise: {
+		// Name: "{$NPCName.IceTortoise}"
+		/* Modifier.Description:
+			'''
+			Freezing. All allies gain
+			Freezing.
+			''' */
+		// Attack.Name: Slippery Shell
+	}
+
+	Deerclops: {
+		// Name: "{$NPCName.Deerclops}"
+		/* Modifier.Description:
+			'''
+			Freezing. All allies gain
+			Freezing.
+			''' */
+
+		Attack: {
+			// Name: Icy Fingers
+			/* Description:
+				'''
+				Deals dmg equal to
+				target's attack cost.
+				''' */
+		}
+	}
+
+	Skeletron: {
+		Name: "{$NPCName.SkeletronHead}"
+		Attack.Name: Кружение
+		Modifier.Description:
+			'''
+			Когда он появляется,
+			размешает две руки
+			скелетрона
+			'''
+	}
+
+	SkeletronHandL: {
+		Name: Левая рука
+		Attack.Name: Шлепок
+		Modifier.Description:
+			'''
+			Пока находится в ата-
+			кующем ряду, союзный
+			Скелетрон наносит +2
+			урона
+			'''
+	}
+
+	SkeletronHandR: {
+		Name: Правая рука
+		Attack.Name: Шлепок
+		Modifier.Description:
+			'''
+			Пока находится в ата-
+			кующем ряду, союзный
+			Скелетрон получает -2
+			урона
+			'''
+	}
+
+	WallOfFlesh: {
+		Name: "{$NPCName.WallofFlesh}"
+		Attack.Name: Стена плоти
+		Modifier.Description:
+			'''
+			Неизбежный: Когда суще-
+			ство появляется, разме-
+			щает два глаза. Это вос-
+			станавливает 1 HP в ход
+			'''
+	}
+
+	WallOfFleshEye: {
+		Name: Глаз Стены плоти
+		Modifier.Description:
+			'''
+			Стойкий. Не может
+			атаковать. Союзная
+			Стена Плоти наносит
+			+1 урона за ход
+			'''
+	}
+
+	Leech: {
+		Name: "{$NPCName.LeechHead}"
+		Attack.Name: Кровососание
+		Modifier.Description:
+			'''
+			Помощник босса: исцеление
+			союзной Стены Плоти увели-
+			чивается на 1 за ход
+			'''
+	}
+
+	EaterOfWorlds: {
+		Name: Пожир. Миров
+		Attack.Name: Червь мира
+		Modifier.Description:
+			'''
+			С шипами.
+			Похищение Жизни. Если
+			это существо достига-
+			ет половины HP, оно
+			трансформируется.
+			'''
+	}
+
+	EaterSegment1: {
+		Name: Сегмент пожир.
+		Attack.Name: Червь мира
+		Modifier.Description:
+			'''
+			Болезненный: если су-
+			щество умирает, другие
+			союзные существа получа-
+			ют Шипы.
+			С шипами.
+			'''
+	}
+
+	EaterSegment2: {
+		Name: Сегмент пожир.
+		Attack.Name: Червь мира
+		Modifier.Description:
+			'''
+			Болезненный: если су-
+			щество умирает, другие
+			союзные существа получа-
+			ют Похищение Жизни.
+			Похищение Жизни.
+			'''
+	}
+
+	EaterOfSouls: {
+		Name: "{$NPCName.EaterofSouls}"
+		Attack.Name: Похищ. Души
+		Modifier.Description:
+			'''
+			Болезненный: если су-
+			щество умирает, другие
+			союзные существа получа-
+			ют Стойкость
+			'''
+	}
+
+	Devourer: {
+		Name: "{$NPCName.DevourerHead}"
+		Attack.Name: Дрожь червя
+		Modifier.Description:
+			'''
+			Болезненный: если су-
+			щество умирает, другие
+			союзные существа получа-
+			ют +1 к урону
+			'''
+	}
+
+	EnchantedNightcrawler: {
+		Name: Звёздный червь
+		Attack.Name: ЖеланиеЧервя
+		Modifier.Description:
+			'''
+			Болезненный: если су-
+			щество умирает, вы по-
+			лучаете 1 MP и 1 карту
+			'''
+	}
+
+	Bunny: {
+		Name: "{$NPCName.Bunny}"
+		Attack.Name: Удар кролика
+
+		Skill: {
+			Name: Навык: Лесн. Желание
+			Description: Получите 1 MP
+		}
+	}
+
+	Dolphin: {
+		Name: "{$NPCName.Dolphin}"
+		Attack.Name: Удар Носом
+
+		Skill: {
+			Name: Навык: Океанс. Желание
+			Description:
+				'''
+				Атаки целевого су-
+				щества стоят на 1 MP
+				меньше в этом ходу.
+				'''
+		}
+	}
+
+	Squirrel: {
+		Name: "{$NPCName.Squirrel}"
+		Attack.Name: БросокЖелудя
+
+		Skill: {
+			Name: Навык: Поддержка
+			Description:
+				'''
+				Следующая атака целе-
+				вого существа наносит
+				+1 урон
+				'''
+		}
+	}
+
+	Goldfish: {
+		Name: "{$NPCName.Goldfish}"
+		Attack.Name: Удар Плавник.
+
+		Skill: {
+			Name: Навык: Исцеление
+			Description:
+				'''
+				Целевое существо
+				восстанавливает 1 HP
+				'''
+		}
+	}
+
+	Bat: {
+		Name: Летучая мышь
+		Attack.Name: Налет
+		Modifier.Description:
+			'''
+			Обход: Может
+			выбрать любого врага
+			для атаки
+			'''
+	}
+
+	JungleBat: {
+		Name: Лет. мышь дж.
+		Attack.Name: Jungle Налет
+		Modifier.Description:
+			'''
+			Обход: Может
+			выбрать любого врага
+			для атаки
+			'''
+	}
+
+	Skeleton: {
+		Name: "{$NPCName.Skeleton}"
+		Attack.Name: Костелом
+	}
+
+	UndeadMiner: {
+		Name: "{$NPCName.UndeadMiner}"
+
+		Attack: {
+			Name: Размах Кирки
+			Description:
+				'''
+				Стоит на 1 MP меньше
+				за каждый экипирован-
+				ный предмет на этом
+				существе.
+				'''
+		}
+	}
+
+	UndeadViking: {
+		Name: "{$NPCName.UndeadViking}"
+
+		Attack: {
+			Name: Ледян. Топор
+			Description:
+				'''
+				Наносит +1 урон если
+				на существе есть эки-
+				пировка
+				'''
+		}
+	}
+
+	AngryBones: {
+		Name: "{$NPCName.AngryBones}"
+		Modifier.Description:
+			'''
+			Экипировка на это су-
+			щество стоит на 1 MP
+			меньше
+			'''
+		Attack.Name: Прокл. Топор
+	}
+
+	ArmoredSkeleton: {
+		Name: Бронир. скелет
+		Modifier.Description:
+			'''
+			Экипировка на это су-
+			щество стоит на 1 MP
+			меньше
+			'''
+
+		Attack: {
+			Name: Могуч. взмах
+			Description:
+				'''
+				Стоит на 1 MP меньше
+				за каждый экипирован-
+				ный предмет на этом
+				существе.
+				'''
+		}
+	}
+
+	ToxicSludge: {
+		Name: "{$NPCName.ToxicSludge}"
+
+		Attack: {
+			Name: Коррозия
+			Description:
+				'''
+				Убирает самую но-
+				вую экипировку с
+				целевого врага.
+				'''
+		}
+	}
+
+	DarkCaster: {
+		Name: "{$NPCName.DarkCaster}"
+
+		Attack: {
+			Name: Проклятие
+			Description:
+				'''
+				Атаки целевого врага
+				в следующем ходу будут
+				стоить +2 MP
+				'''
+		}
+	}
+
+	CursedSkull: {
+		Name: "{$NPCName.CursedSkull}"
+
+		Attack: {
+			Name: Проклятие
+			Description:
+				'''
+				Целевой враг не может
+				использовать навыки в
+				следующем ходу
+				'''
+		}
+
+		Modifier.Description: Обход
+	}
+
+	Types: {
+		CREATURE: Существо
+		ITEM: Предмет
+		TOWNSFOLK: Жители
+		EQUIPMENT: Экипировка
+		CONSUMABLE: Расходный
+		FOREST: Лес
+		CAVERN: Пещера
+		FIGHTER: Боец
+		CRITTER: Живность
+		SCOUT: Разведчик
+		DEFENDER: Защитник
+		CASTER: Заклинатель
+		SLIME: Слизень
+		JUNGLE: Джунгли
+		EVIL: Зло
+		// SNOW: Snow
+		BLOOD_MOON: Кровавая Луна
+		DESERT: Пустыня
+		OCEAN: Океан
+		GOBLIN_ARMY: Армия Гоблинов
+		MUSHROOM: Грибы
+		EXPERT: Эксперт
+		BOSS: Босс
+		OWNED: Только свои
+	}
+
+	Modifiers: {
+		PAUSED: Пауза: Существо не может действовать до следующего хода
+		DEFENSE_BOOST: Стойкий: Получает на {0} меньше урона
+		BLEEDING: Кровотечение: Получате на {0} больше урона
+		POISON: Отравление: Получает {0} урона за ход
+		RELENTLESS: Неутомимый: Может атаковать дополнительно {0} раз
+		EVASIVE: Обход: Может атаковаь любых врагов
+		SPIKED: С шипами: Атакующие получают {0} урона
+		LIFESTEAL: Похищение Жизни: Восстанавливает {0} HP при атаке
+		MORBID: Болезненный: Эффект активируется когда существо умирает
+		// CURSED: Cursed: Cannot use skills
+		// FREEZING: Freezing: Enemy's next attack costs {0} more
+	}
+
+	ModifierNames: {
+		DEFENSE_BOOST: Стойкость
+		BLEEDING: Кровотечение
+		POISON: Отравление
+		RELENTLESS: Неутомимый
+		EVASIVE: Обход
+		ZEALOUS: Ревностный
+		SPIKED: С шипами
+		LIFESTEAL: Похищение Жизни
+		MORBID: Болезненный
+		// CURSED: Cursed
+		// FREEZING: Freezing
+	}
+
+	Common: {
+		Turn: Ход
+		EndTurn: Завершить
+		AddToDeck: Добавьте 1 {0} в колоду
+		RemoveFromDeck: Удалите 1 {0} из колоды
+		UseDeck: Использовать колоду {0}
+		DeckEdit: Изменить колоду {0}
+		DeckCount: Карты
+		FilterCards: Фильтр карт
+		ShowCards: Показать {0} Карты
+		DuelChat: Дуэль!
+		AskDeck: С какой колодой вы хотите сразиться?
+		YouWin: Вы победили!
+		YouLose: Вы проиграли...
+		DeckNotValid: Ваша колода должна содержать ровно 20 карт, и содержать одно существо, не являющееся ни экспертом, ни живностью.
+		Prev: Назад
+		Next: Далее
+		Close: Закрыть
+		DoubleClickToClose: Дабл клик, чтобы сдаться
+		Hearts: Сердца
+		Mana: Кристаллы маны
+		Townsfolk: Эмблема жителей
+		Search: Искать
+		For: " для"
+		UnlockedANewDeck: Разблокирована новая колода
+		AcceptedInvitation: принял ваше приглашение на игру с душой на кону!
+		FoundIn: Найдено в:
+		AnyPack: Любой пак
+		Forfeited: отдал свою душу {0} в карточной игре!
+		PressEscAgainToExit: Нажмите ESC еще раз, чтобы сдаться
+	}
+
+	DeckNames: {
+		Tutorial: Обучение
+		ForestBeginner: Лес 1
+		Forest: Лес 2
+		ForestAdvanced: Лес 3
+		SlimeBeginner: Слизни 1
+		Slime: Слизни 2
+		SlimeAdvanced: Слизни 3
+		JungleBeginner: Джунгли 1
+		Jungle: Джунгли 2
+		JungleAdvanced: Джунгли 3
+		Treasure: Сокровища
+		Salamander: Саламандры
+		BloodMoonBeginner: Кровавая луна 1
+		BloodMoon: Кровавая луна 2
+		BloodMoonAdvanced: Кровавая луна 3
+		MushroomBeginner: Грибы 1
+		Mushroom: Грибы 2
+		SkeletonsBeginner: Скелеты 1
+		Skeletons: Скелеты 2
+		Curse: Темница 1
+		CurseAdvanced: Темница 2
+		GoblinsBeginner: Гоблины 1
+		Goblins: Гоблины 2
+		CrabsBeginner: Океан 1
+		Crabs: Океан 2
+		CrabsAdvanced: Океан 3
+		EvilBeginner: Зло 1
+		Evil: Зло 2
+		EvilAdvanced: Зло 3
+		QueenBee: Королева Пчёл
+		KingSlime: Король Слизней
+		BoC: Мозг Ктулху
+		EoC: Глаз Ктулху
+		EoW: Пожиратель миров
+		Skeletron: Скелетрон
+		WoF: Стена плоти
+	}
+
+	ActionText: {
+		You: Ты
+		Opponent: Противник
+		Move: Переместил
+		Use: Использовал
+		Attack: Атаковал
+		Promote: Прокачал
+		Play: Разыграл
+		Moved: переместил
+		Used: использовал
+		Attacked: атаковал
+		Promoted: прокачал
+		Played: разыграл
+		With: с
+		For: за
+		On: на
+		Died: погиб
+		Ownership: "'s"
+		Skill: умение
+		Bounced: вернул карту в руку
+		AddedMana: добавил кристалл маны
+		Drew: взял
+		Cards: карты
+		To: в
+		NotEnoughMana: Недостаточно маны
+		NotEnoughTownsfolk: Нет доступной эмблемы жителей
+		OnlyOneBoss: Вы можете контролировать только одного босса
+		Morbid: Сработала болезненная способность.
+	}
+
+	Tutorial: {
+		Slide0:
+			'''
+			Добро пожаловать в TerraTCG – карточную игру по мотивам Terraria!
+			Чтобы начать игру, попробуйте поговорить с NPC и выбрать «Дуэль!».
+			Не все NPC поддерживаются на данный момент, но в будущем их станет
+			больше.
+			'''
+		Slide1:
+			'''
+			TerraTCG – это карточная игра между двумя игроками.
+			Каждый игрок начинает с перемешивания своей колоды и взятия 5 карт.
+			Затем один игрок выбирается случайным образом, чтобы ходить первым.
+			'''
+		Slide2:
+			'''
+			У каждого игрока есть 3 типа ресурсов, используемых по-разному:
+			- Сердца, которые теряются каждый раз, когда умирает существо под вашим контролем.
+			- Кристаллы маны, используемые для атак и розыгрыша предметов, которые увеличиваются на 1 за ход.
+			- Эмблема жителей, используемая для розыгрыша карт жителей, обновляется каждый ход.
+			'''
+		Slide3:
+			'''
+			Сердца представляют оставшуюся жизнь игрока.
+			Каждое сердце теряется, когда умирает существо под вашим контролем,
+			и игрок проигрывает, когда все сердца исчерпаны.
+			'''
+		Slide4:
+			'''
+			Кристаллы маны расходуются при выполнении большинства действий,
+			таких как атака существом или розыгрыш предмета.
+			Игроки начинают с одного кристалла на 1-м ходу, затем получают
+			по одному дополнительно до 8-го хода.
+			'''
+		Slide5:
+			'''
+			Эмблема жителей используется для розыгрыша карт жителей –
+			мощных одноразовых эффектов, способных кардинально изменить
+			ход игры.
+			Каждым ходом генерируется одна эмблема жителей.
+			'''
+		Slide6:
+			'''
+			В TerraTCG 3 типа карт:
+			- Существа, которые выкладываются на поле боя для сражений.
+			- Предметы, которые дают временные или постоянные бонусы существам.
+			- Жители, которые предоставляют мощные одноразовые эффекты,
+			например, взятие карт.
+			'''
+		Slide7:
+			'''
+			Существа – основа игры.
+			Их можно выкладывать на поле боя из руки бесплатно.
+			'''
+		Slide8:
+			'''
+			Чтобы разыграть существо, кликните по нему в руке, затем по
+			подходящей пустой зоне на поле боя.
+			'''
+		Slide9:
+			'''
+			Бойцы предназначены для сражений и должны размещаться в атакующем
+			ряду.
+			Только существа в атакующем ряду (иконки мечей) могут атаковать.
+			'''
+		Slide10:
+			'''
+			Существа входят на поле боя в состоянии 'Паузы' и должны ждать один
+			ход, прежде чем действовать.
+			'''
+		Slide11:
+			'''
+			Мелкая живность не сильна в бою, но обладают мощными умениями,
+			поддерживающими другие существа.
+			'''
+		Slide12:
+			'''
+			Мелкие существа уязвимы для атак врагов, но могут быть защищены,
+			если разместить их в оборонительном ряду (иконка щита) в той же колонке,
+			что и другое дружественное существо.
+			'''
+		Slide13:
+			'''
+			Предметы могут быть прикреплены к существам и дают бонусы к их
+			характеристикам.
+			Для розыгрыша предметов из руки расходуются кристаллы маны.
+			'''
+		Slide14:
+			'''
+			Чтобы разыграть предмет, кликните по его карточке в руке, затем
+			по подходящему целевому существу на поле.
+			'''
+		Slide15:
+			'''
+			Наведите курсор на предпросмотр карточки существа, чтобы увидеть,
+			какие бонусы от предметов на него действуют!
+			'''
+		Slide16:
+			'''
+			Карты жителей – особый тип, предоставляющий мощные преимущества,
+			такие как взятие карт и дополнительные кристаллы маны. Вы можете
+			разыграть только одного жителя за ход, что расходует вашу
+			единственную эмблему жителей.
+			'''
+		Slide17:
+			'''
+			Как только все кристаллы маны и эмблема жителей будут использованы,
+			а все существа на поле окажутся в состоянии паузы, вы не сможете
+			совершать дополнительные действия.
+			Нажмите кнопку «Завершить», чтобы передать ход противнику.
+			'''
+		Slide18:
+			'''
+			Противник разыгрывает свои собственные существа, предметы и
+			жителей в свой ход.
+			Как только он передаст ход обратно, ваши существа выйдут из
+			паузы и смогут действовать!
+			'''
+		Slide19:
+			'''
+			Эксперт-существа – особый тип, которые могут быть размещены поверх
+			существа, вышедшего из паузы, если они принадлежат к одному биому
+			и имеют ту же боевую роль.
+			Например, Призрак и Зомби – лесные бойцы, поэтому Зомби может
+			быть прокачан!
+			'''
+		Slide20:
+			'''
+			Чтобы прокачать эксперт-существо, кликните по нему в руке, затем по
+			подходящему существу на поле.
+			'''
+		Slide21:
+			'''
+			Мелкая живность обладают умениями, поддерживающими другие ваши существа.
+			Кликните по мелкому существу, вышедшему из паузы, чтобы использовать его умение.
+			Здесь Кролик дарует вам дополнительный кристалл маны!
+			Использование умения переводит существо в состояние паузы до следующего хода.
+			'''
+		Slide22:
+			'''
+			В любой момент вашего хода вы можете объявить атаку существом из
+			атакующего ряда.
+			Атака расходует кристаллы маны, равные её стоимости, и переводит
+			существо в состояние паузы до следующего хода.
+			'''
+		Slide23:
+			'''
+			Чтобы объявить атаку, сначала кликните по существу в вашем
+			атакующем ряду, затем по любому вражескому существу.
+			'''
+		Slide24: Кролик противника получает 4 урона от атаки.
+		Slide25:
+			'''
+			Когда жизни существа исчерпаны, оно погибает, и противник
+			теряет 1 сердце.
+			Повторяйте этот процесс, пока у противника не закончатся сердца,
+			чтобы выиграть игру!
+			'''
+		Slide26:
+			'''
+			Победа в игре TerraTCG дарует вам несколько бустер-паков.
+			Откройте их, чтобы получить новые карты для вашей коллекции!
+			Жители выдают паки с картами, тематически связанными с их колодами.
+			'''
+		Slide27:
+			'''
+			Победа над NPC разблокирует вторую, более сложную колоду для этого NPC.
+			Победите вторую колоду, чтобы получить Приглашение на Дуэль —
+			мистический предмет, позволяющий бросить вызов самим Боссам в TerraTCG!
+			'''
+		Slide28:
+			'''
+			Победите босса в бою, чтобы получить редкие промо-карты!
+			Сможете ли вы победить каждого* босса в TerraTCG?
+
+			*На данный момент поддерживаются все боссы до хардмода, кроме
+			Циклоп-оленя.
+			'''
+		Slide29:
+			'''
+			Коробка для колоды TerraTCG, изготовленная из 5 древесины на верстаке,
+			позволяет редактировать ваши колоды.
+			Экспериментируйте с картами из бустер-паков и бросайте вызов более
+			сложным противникам!
+			'''
+		Slide30: Это всё для этого обучения. Поговорите со мной снова, чтобы вызвать меня на игру!
+	}
+}
+
+Configs: {
+	ClientConfig: {
+		DisplayName: Конфигурация Клиента
+		Headers.GameUI: Игровой интерфейс
+
+		ShowActionLog: {
+			Label: Показать журнал действий
+			Tooltip: Показать прокручиваемый лог всех действий в игре TerraTCG.
+		}
+
+		ShowTooltips: {
+			Label: Показать подсказки
+			Tooltip: Показать всплывающие подсказки действий во время игр TerraTCG.
+		}
+
+		ShowCardPreview: {
+			Label: Показать предпросмотр карт
+			Tooltip: Показать большое изображение карточки, на которую наведен курсор, во время игр TerraTCG.
+		}
+
+		ShowFoils: {
+			Label: Показать металлические карточки
+			Tooltip: ""
+		}
+	}
+}
