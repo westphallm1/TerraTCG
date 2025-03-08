@@ -108,6 +108,10 @@ namespace TerraTCG.Common.UI.GameFieldUI
         public override void Update(GameTime gameTime)
         {
             SetRectangles();
+			if (TCGPlayer.LocalGamePlayer is GamePlayer gamePlayer)
+			{
+				gamePlayer.PreviewResources = gamePlayer.Resources;
+			}
             base.Update(gameTime);
 			// Chat is disabled inside fancy UI by default, we want it here
 			InGameChat.TogglePlayerChat();

@@ -41,7 +41,9 @@ namespace TerraTCG.Common.GameSystem.GameState
         }
         public PlayerResources PrevResources { get; private set; }
 
-        internal Field Field { get; set; }
+		public PlayerResources PreviewResources { get; set; }
+
+		internal Field Field { get; set; }
 
         internal int SelectedHandIdx { get; set; }
         internal Card SelectedHandCard { get; set; }

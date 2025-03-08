@@ -11,7 +11,7 @@ using static TerraTCG.Common.GameSystem.GameState.GameActions.IGameAction;
 
 namespace TerraTCG.Common.GameSystem.GameState.GameActions
 {
-    internal class RampAction : TownsfolkAction, IGameAction
+    internal class RampAction : TownsfolkAction
     {
 		private int amount;
 
@@ -30,9 +30,9 @@ namespace TerraTCG.Common.GameSystem.GameState.GameActions
 
         public override Zone TargetZone() => null;
 
-        public bool CanAcceptActionButton() => Player.Resources.TownsfolkMana > 0;
+		public override bool CanAcceptActionButton() => Player.Resources.SufficientResourcesFor(GetActionButtonResources());
 
-        public bool AcceptActionButton() => true;
+        public override bool AcceptActionButton() => true;
 
         public override void Complete()
         {

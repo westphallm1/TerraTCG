@@ -11,7 +11,7 @@ using static TerraTCG.Common.GameSystem.GameState.GameActions.IGameAction;
 
 namespace TerraTCG.Common.GameSystem.GameState.GameActions
 {
-    internal class DrawCardAction : TownsfolkAction, IGameAction
+    internal class DrawCardAction : TownsfolkAction
     {
 		private int drawCount;
 		public DrawCardAction() : base() { }
@@ -27,13 +27,13 @@ namespace TerraTCG.Common.GameSystem.GameState.GameActions
 
         public override bool AcceptZone(Zone zone) => false;
 
-        public override Zone TargetZone() => null;
+		public override bool CanAcceptActionButton() => Player.Resources.SufficientResourcesFor(GetActionButtonResources());
 
-        public bool CanAcceptActionButton() => Player.Resources.TownsfolkMana > 0;
+		public override bool AcceptActionButton() => true;
 
-        public bool AcceptActionButton() => true;
+		public override Zone TargetZone() => null;
 
-        public override void Complete()
+		public override void Complete()
         {
             base.Complete();
 

@@ -28,8 +28,11 @@ namespace TerraTCG.Common.GameSystem.GameState.GameActions
 			Player = player;
 		}
 
-        public virtual bool CanAcceptZone(Zone zone) => checkingValidZone || Player.Resources.TownsfolkMana > 0;
-        public abstract bool AcceptZone(Zone zone);
+        public virtual bool CanAcceptZone(Zone zone) => checkingValidZone || Player.Resources.SufficientResourcesFor(GetZoneResources(zone));
+		public abstract bool AcceptZone(Zone zone);
+
+		public virtual bool CanAcceptActionButton() => false;
+		public virtual bool AcceptActionButton() => false;
 
         public abstract ActionLogInfo GetLogMessage();
 
@@ -40,13 +43,17 @@ namespace TerraTCG.Common.GameSystem.GameState.GameActions
 
         public string GetActionButtonTooltip()
         {
-            return $"{ActionText("Use")} {Card.CardName}";
+			var useResourceTo = GetActionButtonResources().GetUsageTooltip();
+			var useCard = $"{ActionText("Use")} {Card.CardName}";
+			return string.IsNullOrEmpty(useResourceTo) ? useCard : $"{useResourceTo}\n{useCard}";
         }
 
         public virtual string GetZoneTooltip(Zone zone)
         {
-            return $"{ActionText("Use")} {Card.CardName} {ActionText("On")} {zone.CardName}";
-        }
+			var useResourceTo = GetZoneResources(zone).GetUsageTooltip();
+			var useCardOnCard = $"{ActionText("Use")} {Card.CardName} {ActionText("On")} {zone.CardName}";
+			return string.IsNullOrEmpty(useResourceTo) ? useCardOnCard : $"{useResourceTo}\n{useCardOnCard}";
+		}
 
         // TODO this is hacky, check whether not having a townsfolk emblem
         // is the reason that the zone can't be selected
@@ -65,7 +72,11 @@ namespace TerraTCG.Common.GameSystem.GameState.GameActions
             return null;
         }
 
-        public virtual void Complete()
+		public virtual PlayerResources GetZoneResources(Zone zone) => new(0, 0, townsfolkMana: 1);
+
+		public virtual PlayerResources GetActionButtonResources() => new(0, 0, townsfolkMana: 1);
+
+		public virtual void Complete()
         {
             Player.Resources = Player.Resources.UseResource(townsfolkMana: 1);
             Player.Hand.Remove(Card);

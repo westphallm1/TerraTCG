@@ -11,7 +11,7 @@ using static TerraTCG.Common.GameSystem.GameState.GameActions.IGameAction;
 
 namespace TerraTCG.Common.GameSystem.GameState.GameActions
 {
-    internal class SearchBossAction : TownsfolkAction, IGameAction
+    internal class SearchBossAction : TownsfolkAction
     {
 		public SearchBossAction() : base() { }
 
@@ -25,11 +25,11 @@ namespace TerraTCG.Common.GameSystem.GameState.GameActions
 
         public override Zone TargetZone() => null;
 
-        public bool CanAcceptActionButton() => Player.Resources.TownsfolkMana > 0 && 
+        public override bool CanAcceptActionButton() => Player.Resources.SufficientResourcesFor(GetActionButtonResources()) && 
 			Player.Resources.Health < Player.Opponent.Resources.Health &&
 			Player.Deck.Cards.Any(c => c.SubTypes[0] == CardSubtype.BOSS);
 
-        public bool AcceptActionButton() => true;
+        public override bool AcceptActionButton() => true;
 
         public override void Complete()
         {
