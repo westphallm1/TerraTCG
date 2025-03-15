@@ -53,7 +53,9 @@ namespace TerraTCG.Common.UI.GameFieldUI
 
             if (ContainsMouse)
             {
-                Main.LocalPlayer.mouseInterface = true;
+				gamePlayer.PreviewResources = gamePlayer.Resources - gamePlayer.InProgressAction.GetActionButtonResources();
+
+				Main.LocalPlayer.mouseInterface = true;
                 if(isClicked)
                 {
                     gamePlayer.SelectActionButton(ActionType.SKILL);

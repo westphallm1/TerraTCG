@@ -45,6 +45,10 @@ namespace TerraTCG.Common.GameSystem.GameState.GameActions
 
         public string GetActionButtonTooltip() => "";
 
+		public PlayerResources GetZoneResources(Zone zone) => default;
+
+		public PlayerResources GetActionButtonResources() => default;
+
         public Color HighlightColor(Zone zone)
         {
             return TCGPlayer.LocalGamePlayer.Owns(zone) ? Color.LightSkyBlue : Color.Crimson;

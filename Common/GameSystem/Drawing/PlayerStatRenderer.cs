@@ -54,7 +54,8 @@ namespace TerraTCG.Common.GameSystem.Drawing
             {
                 float transparency = GetTransparency(i, player.Resources.Health, player.PrevResources.Health, lerpPoint);
                 var hpPos = position + (hpOffset + i * hpSpacing) * scale;
-                spriteBatch.Draw(hpTexture, hpPos, hpTexture.Bounds, Color.White * transparency, 0, hpOrigin, scale, SpriteEffects.None, 0);
+				DrawResource(hpTexture, hpPos, Color.White * transparency, hpOrigin, 
+					scale, player.Resources.Health, player.PreviewResources.Health, i);
             }
 
             // Townsfolk Mana
@@ -64,7 +65,8 @@ namespace TerraTCG.Common.GameSystem.Drawing
                 var townsolkTexture = TextureCache.Instance.TownsfolkIcon.Value;
                 var townsfolkOrigin = new Vector2(townsolkTexture.Width, townsolkTexture.Height) / 2;
                 var townsfolkPos = position + townsfolkOffset * scale;
-                spriteBatch.Draw(townsolkTexture, townsfolkPos, townsolkTexture.Bounds, Color.White * transparency, 0, townsfolkOrigin, scale, SpriteEffects.None, 0);
+				DrawResource(townsolkTexture, townsfolkPos, Color.White * transparency, townsfolkOrigin, 
+					scale, player.Resources.TownsfolkMana, player.PreviewResources.TownsfolkMana, 0);
             }
 
             // Mana
@@ -83,8 +85,9 @@ namespace TerraTCG.Common.GameSystem.Drawing
                 int row = i / MP_PER_ROW;
                 int col = i % MP_PER_ROW;
                 var mpPos = position + (mpOffsets[row] + col * mpSpacing) * scale;
-                spriteBatch.Draw(mpTexture, mpPos, mpTexture.Bounds, Color.White * transparency, 0, mpOrigin, scale, SpriteEffects.None, 0);
-            }
+				DrawResource(mpTexture, mpPos, Color.White * transparency, mpOrigin, 
+					scale, player.Resources.Mana, player.PreviewResources.Mana, i);
+			}
 
 			// The player's head
 			var turnTime = TCGPlayer.TotalGameTime - player.Game.CurrentTurn.StartTime;
@@ -101,6 +104,15 @@ namespace TerraTCG.Common.GameSystem.Drawing
 
 			spriteBatch.Draw(headTexture, position + headOffset, headFrame, Color.White, 0, origin, scale * scaleModifier, effects, 0);
 
-        }
-    }
+			void DrawResource(Texture2D texture, Vector2 pos, Color color, Vector2 origin, float scale, int resourceAmount, int cost, int index)
+			{
+				float brightness = 1;
+				if (player == TCGPlayer.LocalGamePlayer && index >= cost && index < resourceAmount)
+				{
+					brightness = 0.5f + 0.5f * MathF.Sin(MathF.Tau * (float)TCGPlayer.TotalGameTime.TotalSeconds / 2f);
+				}
+				spriteBatch.Draw(texture, pos, texture.Bounds, color * brightness, 0, origin, scale, SpriteEffects.None, 0);
+			}
+		}
+	}
 }

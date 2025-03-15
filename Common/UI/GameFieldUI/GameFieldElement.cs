@@ -87,6 +87,7 @@ namespace TerraTCG.Common.UI.GameFieldUI
                     if((inProgressAction?.CanAcceptZone(zone) ?? false) && gamePlayer.IsMyTurn)
                     {
                         fieldTooltip = gamePlayer.InProgressAction.GetZoneTooltip(zone);
+						gamePlayer.PreviewResources = gamePlayer.Resources - inProgressAction.GetZoneResources(zone);
                     } else if (inProgressAction?.GetCantAcceptZoneTooltip(zone) is string tooltip && gamePlayer.IsMyTurn)
                     {
                         fieldTooltip = tooltip;

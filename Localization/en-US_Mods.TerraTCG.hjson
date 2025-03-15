@@ -2436,6 +2436,7 @@ Cards: {
 		To: to
 		NotEnoughMana: Not enough Mana
 		NotEnoughTownsfolk: No Townsfolk Emblem available
+		NotEnoughHealth: Not enough Health
 		OnlyOneBoss: You can only control one Boss
 		Morbid: Its Morbid ability triggered.
 	}
